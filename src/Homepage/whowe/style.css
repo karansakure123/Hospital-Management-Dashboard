@@ -1,0 +1,276 @@
+/* Container and Section Styling */
+.whowe-sec {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .whowe-heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sec3-card-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add New Button */
+  .add-new-dir {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .add-new-dir:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Card Styling */
+  .whowe-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .whowe-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .whowe-title p {
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .btn-learn-more {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn-learn-more:hover {
+    background-color: #218838;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-update, .btn-delete {
+    padding: 10px 20px;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .btn-update {
+
+    background-color: #36a589;
+    color: #ffffff;
+  }
+  
+  .btn-update:hover {
+    background-color: #1a857c;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Confirmation Toast */
+  .toast-confirm {
+    background-color: #fefeff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+   
+  
+  
+  /* update whowe css */
+
+
+  .update-whowe-sec {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+   }
+  
+  .update-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00467f; /* You can change this color */
+  }
+  
+  .update-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    padding: 10px;
+     border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #9bccc4; /* Highlight color */
+    outline: none;
+  }
+  
+  .btn-update {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #337066; /* Button color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-update:hover {
+    background-color: #00467f; /* Darker shade on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .update-whowe-sec {
+    margin-left: 0px !important;
+    padding: 0px;
+    width: auto;
+   }
+
+   .update-form {
+    
+    width: 300px !important;
+    margin: 0px;
+    margin-left: 0px !important;
+    padding: 1rem;
+  }
+    
+  }
+
+
+
+
+
+
+  /* addnew css */
+
+  /* Container for the Add New section */
+.addnewwho-container {
+  width: 600px;
+  margin: 2rem;
+  padding: 20px;
+  background-color: #ffffff; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Heading style */
+.addnewwho-heading {
+  text-align: center; /* Centered text */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #36658b !important; /* Dark text color */
+}
+
+/* Form layout */
+.addnewwho-form {
+  display: flex; /* Flexbox for easy layout */
+  flex-direction: column; /* Vertical layout */
+}
+
+/* Styles for each form group */
+.form-group {
+  margin-bottom: 15px; /* Space below each form group */
+}
+
+/* Label styles */
+.form-group label {
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold text */
+  color: #555; /* Darker gray for labels */
+}
+
+/* Input and textarea styles */
+.form-control {
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ddd; /* Light border color */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+/* Focus effect for inputs */
+.form-control:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.submit-button {
+  padding: 10px 15px; /* Padding for the button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #5e5d99; /* Primary button color */
+  color: white; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+/* Hover effect for the button */
+.submit-button:hover {
+  background-color: #4a6b8a; /* Darker blue on hover */
+  transform: scale(1.02); /* Slightly enlarge button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .addnewwho-container {
+    margin-top: 5rem;
+    margin-left: 0px;
+    width: auto;
+    padding: 018px; /* Reduce padding on smaller screens */
+  }
+  
+  .form-control {
+    margin-top: 1rem;
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .submit-button {
+    padding: 8px 12px; /* Reduce button padding */
+  }
+}

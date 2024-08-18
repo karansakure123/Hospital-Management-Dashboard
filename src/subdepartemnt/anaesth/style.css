@@ -1,0 +1,489 @@
+/* anaesth css */
+ /* Import Google Font in your index.html or CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+ 
+.bgimgs{
+  margin: 2rem;
+  width: 400px;
+ }
+.exp-card {
+    background-color: hsl(0, 0%, 100%);
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-out;
+    margin: 20px;
+  }
+  
+  .exp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(59, 129, 106, 0.2);
+  }
+  
+  .exp-card-img {
+    width: 100%;
+    height: 250px;
+     object-fit: cover;
+  
+     border-bottom: 2px solid #aad6bc;
+    
+  }
+  .exp-card-body {
+    padding: 20px;
+    border: 0px;
+    height: auto;
+    text-align: center;
+  }
+  
+  .exp-card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .exp-card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .exp-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #389989;
+    color: #fff;
+    border: none;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exp-btn:hover {
+    background-color: #005f5f;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .exp-card {
+      margin-bottom: 20px;
+    }
+  }
+
+/* customScrollbar.css */
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width if needed */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Border radius of the scrollbar thumb */
+    border: 2px solid #f1f1f1; /* Border around the scrollbar thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+  }
+
+
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #589b8a #f1f1f1; /* Scrollbar thumb color and track color */
+  }
+  .ansth-sec1 {
+    position: relative; /* Ensure positioning context for inner elements */
+    overflow: hidden; /* Prevent overflow of inner elements */
+}
+
+.bgimg {
+    position: absolute; /* Position the background image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Send it behind other content */
+}
+
+.bgimg img {
+    width:100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.ansth-sec2 {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    position: relative; /* Relative position for stacking */
+    z-index: 1; /* Bring this section above the background image */
+}
+
+/* Other existing styles remain the same */
+
+  /* Hide close button on larger screens */
+@media (max-width: 768px) {
+     
+    .ansth-sec2 {
+       padding-top: 20px;
+    }
+    .inner-img {
+   height:27vh;
+   width: 100%;
+    }
+    
+    .card-content {
+        margin-top: 2rem;
+         padding: 10px;
+         margin-left: 0px;
+     }
+     .exp-doc-h{
+      
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+  }
+
+  .add-description-button{
+    background-color: rgb(66, 128, 117);
+    color: white;
+    padding: 0.5rem;
+    border:none;
+  }
+
+  .add-description-button:hover{
+    background-color: rgb(36, 96, 100);
+    color: white;
+  }
+.add-service-container {
+    padding: 20px;
+    width: 600px;
+    height: auto;
+    margin: 3rem;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2.text-primary {
+    text-align: center;
+    color: #337066; /* Your primary color */
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-textarea {
+    resize: vertical; /* Allow vertical resizing for text areas */
+  }
+  
+  .submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #337066; /* Your primary color */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #00467f; /* Darker shade for hover effect */
+  }
+  
+
+
+
+
+  /* updateanasth css */
+
+  /* Update Anaesthesia Service Form Container */
+.updateanaesth-container {
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  margin: 3rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.updateanaesth-title {
+  text-align: center;
+  color: #00467f;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+}
+
+/* Form Labels */
+.updateanaesth-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Input and Textarea */
+.updateanaesth-input, .updateanaesth-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.updateanaesth-input:focus, .updateanaesth-textarea:focus {
+  border-color: #00467f;
+  outline: none;
+}
+
+/* Submit Button */
+.updateanaesth-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #00467f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.updateanaesth-submit-btn:hover {
+  background-color: #00355f;
+}
+
+/* Additional Styling for Extra Descriptions */
+.updateanaesth-extra-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background and Inner Image URLs */
+.updateanaesth-img-url-input {
+  margin-bottom: 15px;
+}
+.ansth-sec2{
+  margin-left: -19rem;
+}
+
+  /* Hide close button on larger screens */
+  @media (max-width: 768px) {
+    .updateanaesth-container {
+margin:0px;
+background-color: white;
+width: auto;
+margin-top: 5rem;
+margin-left: -5px;
+    }
+     
+.bgimgs{
+margin-top: 4rem;
+  
+margin-left: -15px;
+
+}
+.ansth-sec2{
+  width: 300px;
+  margin-left: -24rem;
+  margin-top: 9rem;
+margin-right: 120px; 
+}
+.inner-ansth-img{
+  padding: 0px;
+  width: auto;
+}
+
+.update-anaesthbtn{
+  background-color: rgb(36, 105, 114);
+ width: 100%;
+ margin-left: 12px;
+  border-radius: 0px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+
+.update-anaesthbtn:hover{
+  background-color: rgb(71, 118, 124);
+ 
+  color: white;
+   
+}
+.delete-anaesthbtn:hover{
+  background-color: rgb(179, 88, 52);
+ 
+  color: white;
+   
+}
+.delete-anaesthbtn{
+  background-color: rgb(201, 67, 43);
+   width: 100%;
+   border-radius: 0px;
+  color: white;
+}
+  }
+
+
+
+
+
+
+
+
+
+  .make-app-btn{
+    width: auto;
+    background-color: rgb(40, 128, 109);
+    border-radius: 0px;
+    color: white;
+    margin-bottom: 2rem;
+  } 
+
+  .make-app-btn:hover{
+     background-color: rgb(124, 167, 157);
+    border-radius: 0px;
+    color: white;
+   } 
+  .btn-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  /* Update Button */
+  .update-anaesthbtn {
+    background-color: #3e6b64;
+    color: #fff;
+     font-size: 1rem;
+    border-radius: 0px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .update-anaesthbtn:hover {
+    color: white;
+    background-color: #36656b;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .update-anaesthbtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-30deg);
+    transition: left 0.5s ease;
+  }
+  
+  .update-anaesthbtn:hover::before {
+    left: 100%;
+  }
+  
+  /* Delete Button */
+  .delete-anaesthbtn {
+    background-color: #dc3545;
+    color: #fff;
+    margin-left: 10px;
+     font-size: 1rem;
+     border: none;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .delete-anaesthbtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .delete-anaesthbtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-30deg);
+    transition: left 0.5s ease;
+  }
+  
+  .delete-anaesthbtn:hover::before {
+    left: 100%;
+  }
+  .ansth-sec2{
+    margin-right:0px !important;
+  overflow: hidden;
+  margin: 0px !important;
+  }

@@ -1,0 +1,53 @@
+.adddirc-container {
+    margin: 2rem;
+    max-width: 600px; /* Optional: set a max width for better layout */
+    margin-left: 2rem; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+.adddirc-title {
+    margin-top: 2rem ;
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #366986; /* Change title color if needed */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+    width: 100%; /* Ensure full width of the form group */
+}
+
+.form-control {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.form-control:focus {
+    border-color: #366986; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.submit-btn {
+    padding: 10px 20px; /* Padding for button */
+    background-color: #366986; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.submit-btn:hover {
+    background-color: #285f73; /* Darker shade on hover */
+}

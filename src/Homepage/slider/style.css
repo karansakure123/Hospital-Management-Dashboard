@@ -1,0 +1,167 @@
+.hero-sec1 {
+  width: 90%;
+  margin: 4rem auto; /* Center the section */
+  position: relative;
+  overflow: hidden;
+  height: 80vh; /* Adjust height as needed */
+}
+
+.homepage-carousel {
+  position: relative;
+  z-index: 2; /* Bring carousel above video */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+  opacity: 0;
+  transform: translateX(100%); /* Move items out of view */
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translateX(0); /* Bring active item into view */
+}
+
+.carousel-item img {
+  height: 80vh; /* Fixed height */
+  width: 100%; /* Fill the width of the carousel item */
+  max-width: 900px; /* Maximum width to avoid distortion */
+  object-fit: cover; /* Cover the area without distortion */
+  object-position: center; /* Center the image */
+}
+
+/* Update Button Styling */
+.hero-update-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3a7976; /* Green background for update */
+  border: none;
+   transition: background-color 0.3s ease;
+}
+
+.hero-delete-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #dc3545; /* Red background for delete */
+  border: none;
+   transition: background-color 0.3s ease;
+}
+
+.hero-update-btn:hover {
+  background-color: #2b5b55; /* Darker green on hover */
+}
+
+.hero-delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+ 
+
+
+
+/* Carousel Controls Custom Styles */
+.hero-carousel-control-prev,
+ .hero-carousel-control-next {
+  background-color: rgba(77, 165, 168, 0.5); /* Semi-transparent dark background */
+  border-radius: 50%; /* Circular buttons */
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+/* Position previous button to the left */
+.hero-carousel-control-prev {
+  left: 10px; /* Default position for all screen sizes */
+}
+
+/* Position next button to the right */
+.hero-carousel-control-next {
+  right: 10px; /* Default position for all screen sizes */
+}
+
+/* Media query for large devices (lg and up) */
+@media (min-width: 992px) {
+  .hero-carousel-control-prev {
+    left: 30px; /* Increase distance from the left for large devices */
+  }
+  .hero-carousel-control-next {
+    right: 30px; /* Increase distance from the right for large devices */
+  }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+  .hero-sec1 {
+    margin-top: 6rem;
+    margin-left: 0px;
+    height: 120vh; /* Adjust height for mobile */
+  }
+
+  .carousel-item img {
+    width: 180px;
+    height: 70vh !important; /* Ensure images fill the full height of the viewport */
+    object-fit: cover; /* Cover the area without distortion */
+  }
+  
+  .carousel-caption {
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  .hero-carousel-control-prev,
+.hero-carousel-control-next {
+  background-color: rgba(94, 150, 147, 0.7); /* Light background for visibility */
+  border-radius: 50%; /* Make buttons circular */
+  border: none;
+  padding: 10px; /* Adjust padding to fit icon */
+  position: absolute; /* Position absolutely within the carousel */
+  top: 45%; /* Position at the top 30% of the carousel */
+  z-index: 10; /* Ensure controls are above other content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-carousel-control-prev:hover,
+.hero-carousel-control-next:hover {
+  background-color: rgb(77, 168, 156); /* Change background on hover */
+}
+
+/* Position previous button to the left */
+.hero-carousel-control-prev {
+  left: 10px;
+}
+
+/* Position next button to the right */
+.hero-carousel-control-next {
+  right: 10px;
+}
+
+svg {
+  fill: white; /* Set icon color to white */
+  width: 30px; /* Size of the icons */
+  height: 30px;
+}
+
+  
+
+}

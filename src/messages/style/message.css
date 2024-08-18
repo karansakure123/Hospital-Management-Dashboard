@@ -1,0 +1,75 @@
+.messages-sec1 {
+    padding: 40px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 1px;
+  }
+  
+  .msg-heading h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #337066; /* Attractive text color */
+  }
+  
+  .custom-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 20px; /* Space between cards */
+    justify-content: flex-start; /* Align cards to the left when sidebar is open */
+  }
+  
+  /* Card column styles */
+  .custom-col {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row with gap consideration */
+    max-width: calc(50% - 20px); /* Ensure maximum width */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+  }
+  
+  .messages-card {
+    background: linear-gradient(135deg, #00467f, #337066); /* Beautiful gradient */
+    color: #ffffff; /* White text for contrast */
+    border-radius: 1px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+  }
+  
+  .messages-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .msg-card-details p {
+    margin: 10px 0; /* Spacing between details */
+  }
+  
+  .msg-card-details span {
+    font-weight: bold; /* Emphasize the content */
+  }
+  
+  /* Adjust styles based on sidebar state */
+  .sidebar-open .custom-row {
+    justify-content: flex-start; /* Align cards to the left */
+  }
+  
+  .sidebar-closed .custom-row {
+    justify-content: center; /* Center cards when sidebar is closed */
+  }
+  
+  @media (max-width: 768px) {
+    .custom-col {
+      flex: 1 1 100%; /* Full width on small screens */
+      max-width: 100%; /* Full width on small screens */
+    }
+    .messages-sec1 {
+        padding: 0px;
+          border-radius: 1px;
+      }
+ .messages-card{
+  margin-left: -1rem;
+ }
+      .msg-heading h1 {
+    margin-top: 2rem;  
+    }
+
+  }
+  

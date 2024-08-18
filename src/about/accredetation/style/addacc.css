@@ -1,0 +1,90 @@
+ 
+  
+
+.addacc-container {
+    
+    max-width: 600px; /* Limit the width of the form */
+    width: 100%; /* Ensure the form takes full width of its parent */
+    margin: 20px; /* Margin around the form */
+    padding: 30px; /* Padding inside the form */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Box shadow for depth */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+  .addacc-container:hover {
+    transform: scale(1.02); /* Slight scale on hover for depth */
+  }
+  
+  .addacc-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 30px; /* Space below title */
+    color: #333; /* Dark text color */
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Space between letters */
+  }
+  
+  .addacc-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+  }
+  
+  .form-group {
+    margin-bottom: 25px; /* Increased spacing between form groups */
+  }
+  
+  .form-group label {
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Medium gray color for labels */
+    margin-bottom: 8px; /* Space below labels */
+    font-size: 1.1rem; /* Slightly larger label font */
+  }
+  
+  .form-control {
+    padding: 15px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* More rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  }
+  
+  .form-control:focus {
+    border-color: #509c8c; /* Color on focus */
+    box-shadow: 0 0 8px rgba(39, 175, 134, 0.5); /* Soft glow effect */
+    outline: none; /* Remove default outline */
+  }
+  
+  .submit-btn {
+    padding: 15px; /* Padding for the button */
+    width: 100%; /* Full width button */
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 1.1rem; /* Slightly larger button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  .submit-btn:active {
+    transform: translateY(0); /* Reset lift effect on click */
+  }
+  
+  /* Optional: Responsive Design */
+  @media (max-width: 600px) {
+    .addacc-container {
+      padding: 20px; /* Reduced padding on small screens */
+    }
+  
+    .addacc-title {
+      font-size: 1.5rem; /* Smaller title on mobile */
+    }
+  }
+  

@@ -1,0 +1,130 @@
+
+/* Form Section styles */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* Light background for contrast */
+    padding: 20px;
+    z-index: 1000; /* Ensure this is higher than the sidebar */
+    position: relative; /* Ensure position is set for z-index to work */
+}
+
+.add-admin-form {
+    border-radius: 12px; /* More rounded corners */
+    padding: 40px;
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    max-width: 600px; /* Limit the width of the form */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.add-admin-form:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.add-admin-form h2 {
+    text-align: center;
+    color: #00467f; /* Blue heading color */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Use a modern font */
+    font-weight: bold; /* Bold heading */
+}
+
+.add-admin-form label {
+    font-weight: bold;
+    color: #333; /* Dark text color for labels */
+    margin-bottom: 5px; /* Add some space below labels */
+}
+
+.add-admin-form input,
+.add-admin-form select {
+    border: 1px solid #ccc;
+    border-radius: 2px; /* Slightly more rounded edges */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.add-admin-form input:focus,
+.add-admin-form select:focus {
+    border-color: #337066; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(51, 112, 102, 0.5); /* Add glow effect on focus */
+}
+
+.btn-register {
+    width: 100%;
+    background-color: #337066; /* Dark green button */
+    color: #ffffff; /* White text for button */
+    border: none;
+    border-radius: 6px; /* Slightly more rounded edges */
+    padding: 12px; /* Increased padding for a more substantial button */
+    font-size: 16px;
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth color transition */
+}
+
+.btn-register:hover {
+    background-color: #00467f; /* Lighter shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Style for the select element */
+select {
+    appearance: none; /* Remove default styling */
+    background-color: #f0f4f1; /* Light background color */
+    border: 1px solid #a0c4bc; /* Border color */
+    border-radius: 6px; /* Rounded corners */
+    padding: 12px 15px; /* Padding for better spacing */
+    font-size: 16px; /* Font size */
+    color: rgb(71, 149, 163); /* Text color */
+    cursor: pointer; /* Pointer cursor for dropdown */
+    transition: border-color 0.3s, background-color 0.3s; /* Transition effects */
+    width: 100%; /* Full width */
+    position: relative; /* Position for custom dropdown */
+}
+
+/* Custom dropdown arrow */
+select::after {
+    content: "▼"; /* Custom dropdown icon */
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Adjust as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interaction with the arrow */
+}
+
+/* Style for options in the dropdown */
+option {
+    padding: 10px 15px; /* Padding for options */
+    border: none;
+    font-size: 16px; /* Font size for options */
+    background-color: rgb(255, 255, 255); /* Background color for options */
+    color: rgb(59, 71, 73); /* Text color for options */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+}
+
+/* Hover effect for options */
+option:hover {
+    background-color: rgba(51, 112, 102, 0.8); /* Darker background on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Active option styles */
+option:active {
+    background-color: rgba(51, 112, 102, 0.9); /* Background for active option */
+    color: #ffffff; /* Text color for active option */
+}
+
+/* Selected option styles */
+option:checked {
+    background-color: rgba(51, 112, 102, 0.9); /* Change background when option is selected */
+    color: #ffffff; /* Text color for selected option */
+}
+
+/* Focus styles for the select element */
+select:focus {
+    border-color: #00467f; /* Highlight border on focus */
+    background-color: #e7f5f2; /* Change background on focus */
+    outline: none; /* Remove outline */
+}

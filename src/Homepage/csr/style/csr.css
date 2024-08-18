@@ -1,0 +1,297 @@
+/* sec5 */
+.custom-slider-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fdfffe88; /* Light green background */
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.hsec5-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(243, 237, 237, 0.774) !important;
+    border-radius: 8px;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%; /* Ensure full width */
+}
+
+.sec5himg {
+    flex: 1;
+    max-width: 100%; /* Prevent overflow */
+}
+
+.sec5himg img {
+    width: 100%;
+    height: auto;
+    padding: 1rem; /* Adjust padding for better spacing */
+    border-radius: 8px;
+}
+
+.hsec5-text {
+    flex: 1;
+    padding: 1rem; /* Add some padding for text section */
+}
+
+.hsec5-text h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #00796b; /* Dark green color */
+}
+
+.hsec5-text p {
+    margin: 0;
+    font-size: 16px;
+    color: #004d40; /* Darker green color */
+}
+
+/* Carousel Control Buttons */
+.carousel {
+    position: relative; /* Ensure the carousel is positioned relative for absolute children */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgb(185, 185, 185); /* Set background color */
+    border-radius: 50%; /* Make buttons circular */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Position absolutely within the carousel */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for the height of the button */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Position from the left side */
+}
+
+.carousel-control-next {
+    right: 10px; /* Position from the right side */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgb(80, 136, 80); /* Change to green on hover */
+}
+
+.carousel-control-icon {
+    color: rgb(32, 145, 32); /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+/* Styles for Update Button */
+.updatecsr-btn {
+    background-color: #418088; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 1rem;
+}
+
+.updatecsr-btn:hover {
+    background-color: #305781; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Styles for Delete Button */
+.deletecsr-btn {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white; /* White text */
+    margin: 1rem;
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.deletecsr-btn:hover {
+    color: white; /* White text */
+    background-color: #c82333; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.csr-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.csr-heading {
+    font-size: 2rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #00467f; /* Dark blue color */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px; /* Spacing between letters */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.csr-heading::after {
+    content: ''; /* Empty content for the underline */
+    display: block; /* Make it a block element */
+    width: 50%; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background: #00796b; /* Underline color */
+    margin: 5px auto; /* Center the underline */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.csr-addbtn {
+    background-color: #337066; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.csr-addbtn:hover {
+    background-color: #00467f; /* Darker shade on hover */
+}
+
+@media screen and (max-width: 767px) {
+    .hsec5-card {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .sec5himg img {
+        height: 30vh; /* Set image height */
+        padding: 0; /* Remove padding */
+    }
+
+    .hsec5-text {
+        text-align: center; /* Center text on mobile */
+        padding: 1rem; /* Add some padding for mobile */
+    }
+
+    .csr-heading {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .csr-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+    }
+
+    /* Mobile Button Styles */
+    .updatecsr-btn,
+    .deletecsr-btn,
+    .csr-addbtn {
+        width: 100%; /* Full width on mobile */
+        margin: 0.5rem 0; /* Spacing between buttons */
+    }
+
+    /* Styles for Carousel Control Buttons on Mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px; /* Smaller size for mobile */
+        height: 30px; /* Smaller size for mobile */
+        left: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
+}
+
+
+
+
+
+/* addcsr css */
+
+/* src/style/csr.css or src/style/addcsr.css */
+
+/* Container for the CSR form */
+
+
+.csr-form-container {
+    width: 600px;
+    margin: 3rem;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form heading */
+  .csr-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form group styling */
+  .csr-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  .csr-form .form-group label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Input field styling */
+  .csr-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .csr-form .form-control:focus {
+    border-color: #337066;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .csr-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #337066;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .csr-submit-btn:hover {
+    background-color: #00467f;
+  }
+  
+  /* Custom styling for textarea */
+  .csr-form .form-control[type="textarea"] {
+    resize: none;
+  }
+  
+  /* Success and Error toast styling */
+  .toast-success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .toast-error {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+
+  @media screen and (max-width: 767px) {
+  
+    .csr-form-container {
+       width: 330px !important;
+    margin-top: 6rem;
+       margin-left: 0px !important;
+    }}

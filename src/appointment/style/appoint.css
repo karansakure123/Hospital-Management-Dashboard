@@ -1,0 +1,237 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f5;
+    margin: 0;
+}
+
+/* Dashboard Section */
+
+.app-heading {
+    font-size: 2rem; /* Larger font size for prominence */
+    color: #0e2238; /* Darker shade for better contrast */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    font-weight: bold; /* Make the font bold */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    position: relative; /* For adding a decorative line */
+}
+
+/* Decorative line under the heading */
+.app-heading::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50%; /* Width of the line */
+    height: 4px; /* Thickness of the line */
+    background-color: #337066; /* Color of the line */
+    margin: 10px auto 0; /* Center the line and add space above */
+    border-radius: 2px; /* Rounded corners for the line */
+}
+
+/* Optional: Add a hover effect */
+.app-heading:hover {
+    color: #00467f; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.appointment-dashboard {
+    padding: 30px;
+}
+
+/* Banner Styles */
+.dashboard-banner {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox for User Info */
+.first-box {
+    display: flex;
+    align-items: center;
+}
+
+.first-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #4a90e2;
+}
+
+/* Content Styles */
+.content p {
+    margin: 0;
+    color: #555;
+}
+
+.content h5 {
+    margin: 5px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Statistics Box */
+.statistic-box {
+    background-color: #e7f9ed;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.statistic-box p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.statistic-box h3 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+/* Appointment Table Styles */
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appointment-table th,
+.appointment-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.appointment-table th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+    color: #333;
+}
+
+.appointment-table td {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+/* Status Select Styles */
+.status-select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.status-select:hover {
+    border-color: #80bdff;
+}
+
+/* Status Value Styles */
+.value-pending {
+    background-color: #fff3cd;
+}
+
+.value-accepted {
+    background-color: #d4edda;
+}
+
+.value-rejected {
+    background-color: #f8d7da;
+}
+
+/* Icon Styles */
+.icon-green {
+    color: #28a745;
+    font-size: 1.5rem;
+}
+
+.icon-red {
+    color: #dc3545;
+    font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .appointment-dashboard {
+        padding: 15px;
+    }
+
+    .dashboard-banner {
+        padding: 15px;
+    }
+
+    .statistic-box {
+        padding: 10px;
+    }
+
+    .appointment-table th,
+    .appointment-table td {
+        padding: 10px;
+    }
+}
+
+/* Dropdown Styles */
+.status-select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Default background */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Color changes for each status */
+.value-pending {
+    background-color: #f0e2b6; /* Light yellow */
+    color: #856404; /* Dark yellow for text */
+}
+
+.value-accepted {
+    background-color: #c4eccd; /* Light green */
+    color: #155724; /* Dark green for text */
+}
+
+.value-rejected {
+    background-color: #ebced0; /* Light red */
+    color: #721c24; /* Dark red for text */
+}
+
+/* Visited Status Styles */
+.visited-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.visited {
+    color: #28a745; /* Green color for visited */
+}
+
+.not-visited {
+    color: #f3384b; /* Red color for not visited */
+}
+
+/* Icon styles */
+.icon {
+    transition: transform 0.3s ease; /* Add transition for smoother effects */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Slightly scale the icon on hover */
+}

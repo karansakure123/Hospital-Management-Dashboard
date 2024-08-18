@@ -1,0 +1,277 @@
+
+/******** our infra css *******/
+
+
+ .infra {
+  padding: 20px; /* Add padding to the .infra section */
+  background-color: #f9f9f9; /* Optional: Set a background color for contrast */
+}
+.our-infra-heading{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 2rem !important;
+  color: #184d79;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Styles for the images */
+.img-left,
+.img-mid,
+.img-right {
+  
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the box */
+}
+
+/* Specific styles for images in different sections */
+.img-left {
+  height: 400px; /* Set a fixed height for the left image */
+}
+
+.img-mid,
+.img-right {
+  padding-top: 2px;
+  padding: 4px;
+
+  padding-bottom: 4px;
+  height: 200px; /* Set a fixed height for middle and right images */
+}
+
+/* Ensure margins and spacing */
+.infra .col-md-4 {
+  padding: 0 15px; /* Add spacing between columns */
+}
+
+.infra .row > .col-md-4 {
+  padding-top: 15px; /* Ensure spacing at the top of each column */
+}
+
+.infra .row .col-12 {
+  padding: 0; /* Remove padding from inner columns */
+}
+
+.infra .row .col-12.mb-2 {
+  margin-bottom: 15px; /* Add space between images */
+}
+
+/* Media query for screens 767px and smaller */
+@media screen and (max-width: 767px) {
+  .infra {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .img-left,
+  .img-mid,
+  .img-right {
+    height: auto; /* Adjust image height for smaller screens */
+  }
+}
+
+
+
+/* //updateinfra */
+.infraupdate {
+margin-left: 4rem !important;
+  width: 600px; /* Limit the width of the form */
+   padding: 20px; /* Add padding inside the form */
+  background-color: #f6f9fc; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+
+
+}
+
+
+.infraupdate h1 {
+  text-align: center; /* Center the heading */
+  color: #00467f; /* Dark blue color for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+margin-top: 2rem;
+  display: block; /* Make labels block elements */
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold; /* Bold labels */
+  color: #497a7c; /* Darker text for better readability */
+}
+
+.form-group input {
+  width: 100%; /* Full width for input fields */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners for input fields */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-group input:focus {
+  border-color: #00467f; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.update-infrabtn {
+  width: 100%; /* Full width for button */
+  padding: 10px; /* Padding inside button */
+  background-color: #00467f; /* Dark blue background for button */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.update-infrabtn:hover {
+  color: white;
+  background-color: #003052; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+  .infraupdate {
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: rgb(247, 250, 249);
+    margin-left: 1rem !important;
+    box-shadow: none;
+    width: auto;
+    padding-left: 25px !important;
+  padding: 25px; 
+  }
+
+  .form-group input {
+    padding: 8px; /* Reduce padding in input fields */
+  }
+
+  .btn {
+    padding: 8px; /* Reduce padding in button */
+  }
+}
+
+
+
+/* addnew infra css */
+
+
+
+.new-infra {
+  margin-left: 2rem !important;
+ width: 600px; /* Limit the width of the form */
+  margin: 30px auto; /* Center the form on the page */
+  padding: 20px; /* Add padding inside the form */
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.new-infra h1 {
+  text-align: center; /* Center the heading */
+  color: #00467f; /* Dark blue color for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+  display: block; /* Make labels block elements */
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold; /* Bold labels */
+  color: #333; /* Darker text for better readability */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Full width for input fields */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners for input fields */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00467f; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.addinfrabtn {
+  width: 100%; /* Full width for button */
+  padding: 10px; /* Padding inside button */
+  background-color: #00467f; /* Dark blue background for button */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.addinfrabtn:hover {
+  background-color: #003052; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+  .new-infra {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Reduce padding in input fields */
+  }
+
+  .btn {
+    padding: 8px; /* Reduce padding in button */
+  }
+}
+
+.infraupdatebtn{
+  padding: 0.6rem;
+  width: 30%;
+  border-radius: 0px;
+  color: white;
+  background-color: rgb(42, 93, 109);
+}
+
+.infraupdatebtn:hover{
+  background-color: rgb(46, 131, 156);
+color: white;
+}
+.infradeletebtn{
+  margin-left: 1rem;
+  padding: 0.6rem;
+  width: 30%;
+  border-radius: 0px;
+  color: white;
+  background-color: rgb(170, 41, 41);
+}
+
+.infradeletebtn:hover{
+  background-color: rgb(180, 42, 42);
+color: white;
+}
+
+.infraaddbtn {
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 0.6rem;
+  width: 30%;
+  margin-bottom: 2rem;
+  border-radius: 0px;
+  color: white;
+  background-color: rgb(41, 134, 170);
+  text-align: center; /* Ensure text inside the button is centered */
+}
+
+.infraaddbtn:hover {
+  background-color: rgb(38, 78, 90);
+  color: white;
+}

@@ -1,0 +1,131 @@
+/* allcorp.css */
+
+.corp-h {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.add-new-corp {
+  background-color: #1a7575;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+}
+
+
+.add-new-corp:hover {
+  background-color: #169494;
+ 
+}
+
+.corp-heading h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.corp-detail {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.corp-img-container {
+  text-align: center;
+}
+
+.corp-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.update-corp {
+  background-color: #56b9b1;
+  border: none;
+  color: #fff;
+}
+
+.delete-corp {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+}
+
+.toast-confirm {
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.toast-confirm p {
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group button {
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-group button:first-child {
+  background-color: #28a745;
+}
+
+.button-group button:last-child {
+  background-color: #dc3545;
+}
+
+.animate-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-leave {
+  animation: fadeOut 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.addcorp-btn{
+  background-color: rgb(21, 141, 121);
+  color: white;
+border-radius: 0px;
+}
+
+.addcorp-btn:hover{
+  background-color: rgb(69, 114, 106);
+  color: white;
+}
+
+.add-new-corp-container{
+  margin: 3rem;
+}
+
+ .update-corporate-container{
+  margin: 3rem;
+  width: auto;
+ }
+
+ .update-form-container{
+  margin: 2rem;
+ }

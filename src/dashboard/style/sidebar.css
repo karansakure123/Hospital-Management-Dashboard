@@ -1,0 +1,290 @@
+/* Base styles */
+body {
+     margin: 0;
+    background-color: #fafbfe;
+    transition: background-color 0.3s ease;
+}
+/* Basic styling for sidebar */
+.sidebar {
+   
+    padding: 5px;
+}
+  
+.sidebar-item {
+    list-style: none;
+    cursor: pointer;
+}
+  
+.sidebar-link {
+    padding: 0.625rem 1.625rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, padding-left 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+  /* Dropdown icon styles */
+.lni-chevron-up,
+.lni-chevron-down {
+    margin-left: 15px !important;
+    font-size: 0.73rem !important;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-link i {
+    margin-right: 10px;
+}
+  
+.homedropdownrelatered {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+    margin-left: 22px;
+}
+  
+.homedropdownrelatered .dropdown-item {
+    padding: 2px 0;
+}
+  
+.active > .homedropdownrelatered {
+    display: block;
+}
+  
+
+.homedropdownrelatered .sidebar-links {
+    color: #ffffff; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    font-size: 0.94rem;
+    margin-left: -0.3rem !important;
+    padding: 8px 10px; /* Padding for clickable area */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.homedropdownrelatered .sidebar-links:hover {
+    background-color: transparent;
+    padding-left: 0.54rem;
+    color: #f16e6e;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(24, 56, 53, 0.349);
+transition: 0.2s ease;
+}
+ 
+
+
+#dropdown-i {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    padding: 8px;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    transition: transform 0.3s;
+    font-size: 1.5rem;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+.wrapper {
+    display: flex;
+    min-height: 100vh; /* Ensure the wrapper takes the full height of the viewport */
+}
+
+#sidebar {
+    height: auto; /* Allow the sidebar to adjust its height based on content */
+    width: 60px; /* Initial width */
+    z-index: 1000;
+    transition: width 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    background-color: rgb(18, 5, 65); /* Background color */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent sidebar scrolling */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.473); /* Add box shadow */
+}
+
+#sidebar.expand {
+    width: 260px; /* Expanded width */
+}
+.sidebar-header-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar heading styles */
+.sidebar-heading {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: #fff; /* Adjust the color as needed */
+    margin-left: 10px; /* Adjust the spacing between the toggle button and heading */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+/* Additional styling for the sidebar logo */
+.sidebar-logo {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+/* Gradient wave animation */
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Icon color styles */
+.toggle-btn i {
+    color: purple; /* Icon color when closed */
+}
+
+#sidebar.expand .toggle-btn i {
+    color: white; /* Icon color when expanded */
+}
+
+/* Sidebar nav styles */
+.sidebar-nav {
+    padding: 2rem 0; 
+    flex: 1 1 auto;
+    display: none; /* Hidden by default */
+}
+
+#sidebar.expand .sidebar-nav {
+    display: block; /* Show when expanded */
+}
+
+/* Sidebar link styles */
+a.sidebar-link {
+    padding: 0.625rem 1.625rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, padding-left 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(23, 16, 66, 0.8);
+    padding-left: 1.5rem;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+}
+
+/* Sidebar item styles */
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: 0.75rem;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+/* Dropdown styles */
+.sidebar-dropdown {
+    padding: 0;
+    display: none;
+    position: relative;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.sidebar-dropdown.show {
+    display: block;
+    max-height: 200px; /* Adjust max height as needed */
+    opacity: 1;
+}
+
+.sidebar-dropdown .sidebar-item {
+    padding: 1px 35px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-dropdown .sidebar-item:hover {
+    background-color: rgba(8, 7, 58, 0.7);
+}
+
+/* Sidebar footer styles */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 0px;
+    text-align: start;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Chevron icon styles */
+.lni-chevron-up,
+.lni-chevron-down {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.has-dropdown[aria-expanded="true"] .lni-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .toggle-btn {
+        padding: 10px;
+        margin-top: 1rem;
+    }
+
+    #sidebar {
+        height: 60px; /* Reduced height for mobile */
+        width: 30px; /* Initial width */
+    }
+
+    #sidebar.expand {
+        height: auto; /* Auto height when expanded */
+    }
+
+    #sidebar .toggle-btn {
+        align-self: flex-end; /* Position the toggle button to the right */
+    }
+
+    .sidebar-heading {
+        display: none; /* Hide the sidebar heading */
+    }
+
+    .sidebar-footer {
+        display: none; /* Hide the sidebar footer */
+    }
+}
+
+ 
+  
+  .layout {
+    display: flex; /* Use Flexbox for layout */
+   }
+  
+  

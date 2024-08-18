@@ -1,0 +1,174 @@
+/* Center the form container */
+.updatedoct-container {
+    width: 600px;
+    margin: 3rem;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header styles */
+.updatedoct-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form styles */
+.updatedoct-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.updatedoct-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+/* Input, select, and file styles */
+.updatedoct-input,
+.updatedoct-select,
+.updatedoct-file {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+
+.updatedoct-input:focus,
+.updatedoct-select:focus,
+.updatedoct-file:focus {
+    border-color: #ff6f61;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+/* Button styles */
+.updatedoct-button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff6f61, #d40000);
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.updatedoct-button:hover {
+    background: linear-gradient(135deg, #e55d57, #b30000);
+    transform: translateY(-3px);
+}
+
+/* Image container styles */
+.updatedoct-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Image styles (remove border radius) */
+.updatedoct-img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ff6f61;
+    border-radius: 50%;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.updatedoct-img:hover {
+    transform: scale(1.1);
+    border-color: #d40000;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Placeholder styling */
+.updatedoct-input::placeholder,
+.updatedoct-select::placeholder,
+.updatedoct-file::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Label and input focus effect */
+.updatedoct-label {
+    position: relative;
+}
+
+.updatedoct-label::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6f61;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.updatedoct-input:focus + .updatedoct-label::after,
+.updatedoct-select:focus + .updatedoct-label::after,
+.updatedoct-file:focus + .updatedoct-label::after {
+    width: 100%;
+}
+
+/* Input icons */
+.updatedoct-input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.updatedoct-input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.updatedoct-input:focus ~ .updatedoct-input-icon {
+    color: #ff6f61;
+}
+
+/* Adjust padding for input with icons */
+.updatedoct-input {
+    padding-left: 45px;
+}
+@media (max-width: 768px) {
+    .updatedoct-container {
+margin: 0px;
+margin-top: 5rem;
+margin-left: -10px;
+width: 350px;
+  }
+}

@@ -1,0 +1,83 @@
+/* updatedept.css */
+.update-sec{
+    padding: 2rem;
+}
+.update-department {
+    margin-bottom: 2rem;
+    margin: 2rem;
+
+    max-width: 600px;
+    margin: auto;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s; /* Lift effect */
+}
+
+.update-department:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #004d40; /* Darker green for the heading */
+    margin-bottom: 20px;
+}
+
+.dept-name-label,
+.dept-image-label {
+    font-weight: bold;
+    color: #004d40; /* Darker green for labels */
+}
+
+.dept-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.dept-input:focus {
+    border-color: #00796b; /* Highlight border color on focus */
+    outline: none;
+}
+
+.update-btn {
+    background-color: #00796b; /* Deep teal background */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s; /* Button transition */
+    display: block;
+    margin: 20px auto; /* Center button */
+}
+
+.update-btn:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.image-preview {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-preview h4 {
+    color: #004d40; /* Darker green for the preview heading */
+}
+
+.image-preview img {
+    width: 200px;
+    height: auto;
+    background-color: rgb(57, 107, 103);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for image */
+    margin: 10px 0;
+}

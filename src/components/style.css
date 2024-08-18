@@ -1,0 +1,257 @@
+/* Variables */
+:root {
+    --primary-color: #2a2a72;
+    --secondary-color: #009ffd;
+    --accent-color: #ff5e62;
+    --text-color: #ffffff;
+    --button-color: #ffca28; /* Button color */
+    --button-hover-color: #fbc02d; /* Button hover color */
+    --button-active-color: #e0a500; /* Button active color */
+    --font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Global Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    overflow: hidden;
+  }
+  
+  /* Welcome Section */
+  .welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #1a1a2e, #0f0c29);
+    position: relative;
+    color: var(--text-color);
+    overflow: hidden;
+  }
+  
+  /* Content Styles */
+  .welcome-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Title Styles */
+  .welcome-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--accent-color), #ff9a9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textAnimation 2s ease infinite alternate;
+  }
+  
+  /* Subtitle Styles */
+  .welcome-subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  /* Description Styles */
+  .welcome-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.85;
+  }
+  
+  /* Button Styles */
+  .welcome-button {
+    font-size: 1.5rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffca28, #ff5e62); /* Gradient background */
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .welcome-button:hover {
+    background: linear-gradient(135deg, #fbc02d, #ff5e62); /* Change gradient on hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .welcome-button:active {
+    background: var(--button-active-color);
+    transform: scale(0.95);
+  }
+  
+  /* Background Shapes */
+  .background-shapes {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .square {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 70%;
+    animation-delay: 2s;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation-delay: 4s;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textAnimation {
+    0% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button Styles */
+.welcome-button {
+  font-size: 1.5rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px; /* More rounded edges */
+  background: linear-gradient(135deg, #ff5e62, #ffca28); /* Gradient background */
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.welcome-button:hover {
+  background: linear-gradient(135deg, #ffca28, #ff5e62); /* Reverse gradient on hover */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Effect */
+.welcome-button:active {
+  background: #e0a500; /* Solid color when active */
+  transform: scale(0.95);
+}
+
+/* Button Hover Animation */
+.welcome-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+}
+
+/* Create ripple effect on hover */
+.welcome-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Button Text Style */
+.welcome-button span {
+  position: relative;
+  z-index: 1; /* Bring text above the background effect */
+}
+
+/* Smooth Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button Animation on Hover */
+.welcome-button:hover {
+  animation: pulse 1s infinite;
+}

@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Cardo:ital,wght@0,400;0,700;1,400&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+/* Accreditation */
+.acc-heading {
+  color: blue;
+  font-size: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.acc-p > p {
+  color: rgb(29, 88, 92);
+  font-size: 1.1rem;
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* Section 2 */
+.sec2-aboutcontainer {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.about-sec2-heading {
+  text-align: center;
+  color: blue;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.about-sec2-img {
+  width: 90%;
+  height: auto;
+  padding: 2rem;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Keyframes for subtle floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Card styling */
+.about-sec2-card {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.about-sec2-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.add-new-acc {
+  border: none;
+  width: 40% ;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  color: white;
+  background-color: rgb(47, 103, 136);
+  width: 100%; /* Full width button on mobile */
+ }
+/* Responsive styling for smaller screens */
+@media (max-width: 767px) {
+  .sec2-aboutcontainer {
+    text-align: center;
+  }
+  
+  .about-sec2-card {
+padding: 0px !important;
+  }
+
+  .accreditation {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  /* Ensure full width and no overflow on mobile */
+  .acc-p,
+  .about-sec2-img {
+    width: 100%; /* Ensure full width */
+  }
+  
+  .d-flex {
+    flex-direction: column; /* Stack elements on mobile */
+  }
+  .about-sec2-img {
+    padding: 0px;
+    width: 100%; /* Set the image to take full width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center image if needed */
+    display: block; /* Ensure it's displayed as a block element */
+
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .acc-heading {
+    font-size: 2.5rem; /* Responsive font size */
+  }
+
+  .add-new-acc {
+    border: none;
+    padding: 0.9rem;
+    width: 100% !important;
+    color: white;
+    background-color: rgb(47, 103, 136);
+     margin-bottom: 1rem; /* Space below the button */
+  }
+}
+
+.about-sec3 {
+  padding: 2rem 0;
+  background-color: #fcf8f6e8;
+}
+
+.about-sec3-heading {
+  text-align: center;
+  color: rgb(21, 137, 184) !important;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-sec3-card {
+  padding: 1rem;
+  background-color: rgb(250, 247, 247);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.about-sec3-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sec3-card-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-sec3-imgs {
+  width: 65%;
+  height: 25vh;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 5s ease-in-out infinite;
+}
+
+.about-sec3-card:hover .about-sec3-imgs {
+  transform: scale(1.05);
+}
+
+.about-sec3-heading {
+  text-align: center;
+  color: rgb(32, 32, 150);
+  font-size: 3rem !important;
+  font-weight: 500;
+}
+
+.sec3-card-title h6 {
+  margin: 0;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.corp-heading > h1 {
+  text-align: center;
+  color: rgb(43, 107, 133);
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.corp-detail > p {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corp-img {
+  height: 60vh;
+  width: 100%;
+}
+
+.acc-img,
+.valimg {
+  background-color: rgba(144, 206, 182, 0.075);
+  margin: 0 auto;
+  width: 100%;
+  animation: float 5s ease-in-out infinite;
+}
+
+
+/* Update form styling */
+.update-form-container {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  min-height: 100vh; /* Full height of the viewport */
+  background-color: #f4f7f9; /* Light background for contrast */
+}
+
+.update-heading {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(21, 137, 184) !important;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.update-form {
+  max-width: 600px; /* Limit the width of the form */
+  width: 100%; /* Ensure full width */
+  margin-left: 2rem;
+  padding: 30px; /* Padding inside the form */
+  background-color: transparent; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(14, 129, 58, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.update-form:hover {
+  transform: scale(1.02); /* Slight scale on hover for depth */
+}
+
+.update-form h1 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #318f8f; /* Dark text color for contrast */
+  font-size: 2rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Spacing between form groups */
+}
+
+.form-group label {
+  margin-top: 1rem;
+  display: block; /* Display label as block */
+  margin-bottom: 8px; /* Space below labels */
+  font-weight: 400 !important; /* Bold labels */
+  color: #35695c !important; /* Dark gray for better readability */
+  font-size: 1rem; /* Slightly larger font size */
+}
+
+.form-group input {
+  height: auto;
+  width: 100%; /* Full width of the parent */
+  padding: 12px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.form-group textarea {
+  width: 100%; /* Full width of the parent */
+  padding: 12px; /* Padding inside textarea */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #35695c; /* Darker border on focus */
+  box-shadow: 0 0 5px rgba(53, 105, 92, 0.5); /* Shadow on focus */
+}
+
+.button-group {
+  display: flex; /* Flexbox for button alignment */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px; /* Space above buttons */
+}
+
+.button-group button {
+  margin: 0 5px; /* Space between buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+}
+
+.button-group button:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+ 
+@media (max-width: 600px) {
+  .updateAndDelete {
+       display: flex; /* Enable flexbox */
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons */
+      width: 100%; /* Full width */
+  }
+ 
+  .update-acc,
+  .delete-acc {
+      width: 100%; /* Full width for buttons on mobile */
+      margin-bottom: 0.5rem; /* Space between buttons */
+  }
+}
+
+.update-acc {
+    padding: 0.6rem;
+    color: white;
+    margin-top: 1rem;
+    background-color: rgb(21, 136, 101) !important;
+    border: none; /* Remove border */
+    margin-left: 10px; /* Space between buttons */
+    width: 120px; /* Fixed width */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.update-acc:hover {
+    background-color: rgb(17, 120, 91); /* Darker green on hover */
+}
+
+.delete-acc {
+  margin-top: 1rem;
+    width: 120px; /* Fixed width */
+    padding: 0.6rem;
+    border: none; /* Remove border */
+    margin-left: 10px; /* Space between buttons */
+    color: white;
+    background-color: rgb(180, 45, 28); /* Red background */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.delete-acc:hover {
+    background-color: rgb(150, 30, 20); /* Darker red on hover */
+} 

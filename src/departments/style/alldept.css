@@ -1,0 +1,178 @@
+.dept-sec1 {
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+.dept-title {
+  font-family: 'Poppins', sans-serif; /* Apply the Google Font */
+  text-align: center;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  color: rgb(68, 16, 16); /* Text color */
+  background: linear-gradient(45deg, #ff4e50, #f9d423); /* Gradient text color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem; /* Adjust font size */
+  font-weight: 600; /* Apply bold weight */
+  text-transform: uppercase; /* Transform text to uppercase */
+  letter-spacing: 1px; /* Add letter spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+  padding: 0.5rem 1rem; /* Add padding around text */
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Ensure padding and background work correctly */
+}
+
+.dept-sec2-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.dept-card {
+  border: none;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative;
+  background-color: #337066; /* Set card background to blue */
+  cursor: pointer;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Increased width for a larger card */
+  height: 360px; /* Increased height for a larger card */
+  margin: 0 auto; /* Center the card */
+}
+.toast-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa; /* Background color */
+  color: #333; /* Text color */
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.toast-confirm button {
+  margin-top: 8px;
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toast-confirm button:first-child {
+  background: #28a745; /* Green for Yes */
+  color: white;
+}
+
+.toast-confirm button:first-child:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+.toast-confirm button:last-child {
+  background: #dc3545; /* Red for No */
+  color: white;
+}
+
+.toast-confirm button:last-child:hover {
+  background: #c82333; /* Darker red on hover */
+}
+
+.dept-sec1-imgs {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: contain; /* Ensure image is contained within the card */
+  height: 30%;
+   margin: 0 auto; /* Increased height for image */
+  width: 90%; /* Set width to full */
+  background-color: transparent; /* Set to transparent */
+  margin-top: 2rem;
+
+}
+
+.dept-card-body {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  flex-grow: 1; /* Allow the card body to grow and fill the available space */
+  justify-content: flex-start; /* Align items at the top */
+}
+
+.dept-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff; /* Set title text color to white */
+  margin-bottom: 10px;
+  transition: color 0.5s ease-in-out;
+}
+
+.dept-readmore {
+  background-color: rgb(17, 129, 129); /* Button background color */
+  padding: 0.7rem; /* Padding for buttons */
+  border: 0; /* Remove border */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out; /* Transition for background color */
+  margin: 0 5px; /* Add margin between buttons */
+}
+  
+
+/* Hover effect for card */
+.dept-card:hover {
+  background-color: rgb(28, 78, 70);
+  transition: 0.6s ease-in;
+  color: white;
+  transform: scale(1.01); /* Slightly enlarge card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+ 
+.update-btn:hover {
+  background-color: #009e79; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+ .button-group {
+ margin-bottom: 1rem;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out buttons */
+  align-items: center; /* Center items vertically */
+  margin-top: 10px; /* Add spacing above the button group */
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #1f6d64, #47948e); /* Green gradient background */
+  padding: 0.8rem 1.5rem; /* Increased padding for a better size */
+  border: none; /* Remove border */
+  border-radius: 0px !important; /* Rounded corners for a softer look */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  font-size: 1rem; /* Font size for better readability */
+  font-weight: 600; /* Bold text */
+  color: #fff; /* Text color */
+  margin-right: 10px; /* Space between buttons */
+}
+
+.delete-icon {
+  margin-left: 1rem;
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Use flexbox to center icon */
+  align-items: center; /* Center icon vertically */
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Red gradient background */
+  padding: 0.8rem; /* Padding for the icon */
+  border-radius: 8%; /* Circular background for icon */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.delete-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}

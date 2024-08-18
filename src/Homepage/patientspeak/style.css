@@ -1,0 +1,362 @@
+/**************     sec7 css   ********/
+
+
+
+
+
+
+/* sec7 */
+
+/* Patientspeak.css */
+.pspeak-heading {
+
+  font-size: 2.5rem;
+  /* Large font size for emphasis */
+  font-weight: bold;
+  /* Bold text */
+  color: #00467f;
+  /* Heading color */
+  margin-bottom: 1.5rem;
+  /* Space below the heading */
+}
+
+.addnewspeakbtn {
+  background-color: rgb(75, 118, 134);
+  /* Button background color */
+  color: white;
+  /* Text color */
+  border: none;
+  /* No border */
+  padding: 0.75rem 1.5rem;
+  /* Padding inside the button */
+  font-size: 1.2rem;
+  /* Font size for the button text */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.addnewspeakbtn:hover {
+  background-color: #003c4f;
+  /* Darker shade on hover */
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Center the buttons */
+  margin-top: 10px;
+  /* Add margin for spacing */
+}
+
+.update-speak,
+.delete-speak {
+  padding: 10px 15px;
+  /* Increase button padding*/
+  margin: 1rem;
+  width: 30%;
+  font-size: 14px;
+  /* Set font size */
+  border-radius: 0px;
+  /* Rounded corners */
+  transition: background-color 0.3s ease;
+  /* Smooth background transition */
+}
+
+.update-speak,
+.updatebtn-speak {
+  background-color: #37787a;
+  /* Bootstrap primary color */
+  color: white;
+  /* Text color */
+}
+
+.update-speak:hover,
+.updatebtn-speak:hover {
+  color: white;
+  /* Text color */
+  background-color: #346599;
+  /* Darker shade on hover */
+}
+
+.delete-speak {
+  background-color: #dc3545;
+  /* Bootstrap danger color */
+  color: white;
+  /* Text color */
+}
+
+.delete-speak:hover {
+  color: white;
+  /* Text color */
+  background-color: #c82333;
+  /* Darker shade on hover */
+}
+
+.sec7-pspeak {
+
+  background-color: #f7f7f7;
+  /* Light background for the section */
+}
+
+.pspeak-heading {
+  font-size: 2.3rem !important;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: rgb(40, 98, 165);
+}
+
+.sec7-card {
+  background: rgb(196, 199, 197);
+  /* Card background color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  margin-bottom: 30px;
+  /* Space between cards */
+  position: relative;
+  /* Position relative for absolute positioning of text */
+}
+
+.sec7-video {
+
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  /* Hide overflow */
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+
+@media (max-width: 768px) {
+
+
+  .sec7-pspeak {
+
+    padding: 0px;
+    margin-left: -30px;
+  }
+
+
+
+  .update-speak,
+  .delete-speak {
+    width: 90%;
+
+  }
+
+
+}
+
+.card-text-sec7 {
+  position: absolute;
+  /* Absolute positioning for overlay */
+  bottom: 0px;
+  /* Distance from the bottom */
+  left: 0;
+
+
+  right: 0;
+  background-color: rgba(79, 121, 206, 0.301);
+  /* Semi-transparent background for text */
+  text-align: center;
+  /* Center text */
+  color: #ebe6e6;
+  /* Darker text for readability */
+  border-radius: 0 0 10px 10px;
+  /* Rounded corners at the bottom */
+}
+
+.card-text-sec7 h5 {
+  font-size: 1.25rem;
+  /* Font size for heading */
+  margin: 0;
+  /* Remove margin */
+  font-weight: 600;
+  /* Make the text bolder */
+}
+
+
+
+
+/* updatespeak css */
+
+
+
+
+
+.update-patient-speak {
+  margin: 3rem;
+  /* Center the form horizontally */
+  width: 500px;
+  padding: 2rem;
+  /* Add padding for a better layout */
+  border: 1px solid #ddd;
+  /* Light border for a subtle effect */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  background-color: #f9f9f9;
+  /* Light background for contrast */
+}
+
+.update-patient-speak h1 {
+  margin-bottom: 1.5rem;
+  /* Space below the heading */
+  font-size: 1.8rem;
+  /* Increase font size for emphasis */
+  color: #4b7666;
+  /* Darker color for the heading */
+  text-align: center;
+  /* Center the heading */
+}
+
+.form-label {
+  font-weight: 600;
+  /* Bold labels for clarity */
+  color: #333;
+  /* Dark color for labels */
+}
+
+.form-control {
+  border-radius: 5px;
+  /* Rounded input fields */
+  border: 1px solid #ccc;
+  /* Light border */
+  padding: 0.5rem;
+  /* Padding inside input fields */
+  transition: border-color 0.3s;
+  /* Smooth transition on focus */
+}
+
+.form-control:focus {
+  border-color: rgb(75, 118, 134);
+  /* Change border color on focus */
+  outline: none;
+  /* Remove default outline */
+}
+
+.updatebtn-speak {
+  border-radius: 5px;
+  /* Rounded button corners */
+  padding: 0.5rem;
+  /* Button padding */
+  width: 80% !important;
+  /* Button width */
+  color: white;
+  /* White text */
+  background-color: rgb(75, 118, 134);
+  /* Button background */
+  border: none;
+  /* Remove default border */
+  transition: background-color 0.3s;
+  /* Smooth background change */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}
+
+.updatebtn-speak:hover {
+  background-color: rgb(60, 100, 110);
+  /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+  .update-patient-speak {
+    width: 90%;
+    margin-top: 6rem !important;
+    margin-left: 0px !important;
+    /* Make the form take up more width on smaller screens */
+    margin: 1rem auto;
+    /* Center the form with less margin */
+  }
+
+  .updatebtn-speak {
+
+    width: 100% !important;
+  }
+
+}
+
+
+
+/* addnewspeak csss */
+
+
+.add-speak {
+  width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  margin-left: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.add-speak-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.add-speak-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: rgb(75, 118, 134);
+  outline: none;
+}
+
+.add-speak-btn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(75, 118, 134) !important;
+  color: white !important;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-speak-btn:hover {
+  color: white;
+
+  background-color: rgb(60, 100, 115);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-speak {
+  margin-left: 0px;
+  margin-top: 6rem;
+  width: auto; 
+  }
+  
+  .add-speak-heading {
+      font-size: 1.5rem;
+  }
+}
+

@@ -1,0 +1,90 @@
+.update-director-container {
+    padding: 20px;
+   }
+  
+  .update-director-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .update-director-form {
+    background-color: #f8f9fa; /* Light background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .sec3-card-buttons {
+    display: flex;  
+     margin-bottom: 2rem;        /* Use flexbox for layout */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px;              /* Add space between buttons */
+    margin-top: 20px;       /* Optional: Add some space above the buttons */
+  }
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Standard input border */
+    border-radius: 4px;
+  }
+  
+  .sec2-card-buttons {
+    display: flex; /* Use flexbox for button layout */
+    justify-content: space-between; /* Space buttons evenly */
+    margin-top: 10px; /* Space above the button container */
+  }
+  
+  .btn-update, .btn-delete {
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .btn-updateqp {
+    padding: 10px 15px; /* Button padding */
+    background-color: #3e6b80; /* Blue color for update button */
+    color: white; /* White text */
+    border: 0px;
+
+  }
+  
+  .btn-updateqp:hover {
+    background-color: #366e6a; /* Darker blue on hover */
+  }
+  
+  .btn-deleteqp {
+    padding: 10px 15px; /* Button padding */
+     background-color: #dc3545; /* Red color for delete button */
+    color: white; /* White text */
+    border: 0px;
+  }
+  
+  .btn-deleteqp:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  .about-sec3-heading {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .about-sec3-card {
+    border: 1px solid #ced4da; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip the image to fit the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  .sec3-card-img img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .sec3-card-title {
+    padding: 10px; /* Space around text */
+    text-align: center; /* Center text */
+  }
+  

@@ -1,0 +1,266 @@
+/* Custom CSS for Navbar Logo */
+.navbar-brand img {    height: 48px;
+    width: auto; /* Maintain aspect ratio */
+    padding: 0.3rem;
+    margin-top: 2rem;
+     margin-bottom: 3rem;
+}
+.nav-logo {
+    width: 150px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the logo */
+}
+
+/* Input Field Styles */
+.logo-input {
+     padding: 8px; /* Padding inside the input */
+    width: 80%; /* Width of the input field */
+    max-width: 400px; /* Maximum width */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+margin-left: 2rem;
+    font-size: 14px; /* Font size for input text */
+}
+
+
+
+/* Custom Navbar Styles */
+.navbars {
+
+    padding: 0.1rem !important;
+}
+ .logout{
+width: 40%;
+text-align: center;
+color: rgb(141, 66, 66);
+    margin-top: 1rem;
+    margin-left: 2rem;
+border-radius: 12px;
+    background-color: rgb(236, 236, 236);
+ }
+.items{
+    width:500px;
+    margin-left: 1rem;
+    padding: 0.4rem !important;
+
+    justify-content: flex-end;
+    background-color: rgb(245, 245, 245);
+margin-top: 0.3rem;
+ }
+/* Link styles */
+ 
+ 
+/* Icon styles */
+.icon {
+    cursor: pointer; /* Pointer cursor for icons */
+    font-size: 18px; /* Icon size */
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    padding: 0px !important;
+
+}
+
+.nav-link{
+    color: rgb(66, 168, 160);
+}
+.nav-link:hover{
+    color: rgb(206, 206, 206);
+
+}
+.items:hover{
+    cursor: pointer;
+    color: rgb(177, 177, 177);
+
+    background-color: rgb(244, 248, 248);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .icon {
+        margin-left: 0rem;
+        display: flex; /* Enable flexbox layout */
+        justify-content: space-between; /* Distribute space between icons */
+        align-items: center; /* Center icons vertically */
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    .nav-link {
+        padding: 10px; /* Adjust link padding */
+    }
+    .items{
+    
+        width:300px;
+        margin-left: 0px;
+        padding: 0.1rem !important;
+            background-color: rgb(233, 226, 226);
+    margin-top: 0.3rem;
+     }
+}
+
+/* Ensure proper alignment for mobile */
+ 
+.save-btn-nav{
+    border-radius: 0px;
+    padding: 0.7rem;
+    color: white;
+    background-color: rgb(85, 179, 143);
+}
+
+.save-btn-nav:hover{
+    
+    background-color: rgb(35, 146, 103);
+}
+
+
+
+/* addnav css */
+
+/* Base styles for the form */
+.add-navbar-container {
+    max-width: 600px;
+    margin: 3rem ;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-navbar-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-navbar-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.add-navbar-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+.add-navbar-form input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.add-navbar-form input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.add-navbar-form button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #3d7f88;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-navbar-form button[type="submit"]:hover {
+    background-color: #2e6e69;
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .add-navbar-container {
+        padding: 1.5rem;
+        width: auto;
+        margin-left: 1rem;
+        margin-top: 6rem;
+    }
+
+    .add-navbar-form .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .add-navbar-form label {
+        font-size: 0.9rem;
+    }
+
+    .add-navbar-form input[type="text"] {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .add-navbar-form button[type="submit"] {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .add-navbar-container {
+        max-width: 700px;
+        padding: 2rem;
+    }
+
+    .add-navbar-form input[type="text"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .add-navbar-form button[type="submit"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .add-navbar-container {
+        max-width: 800px;
+        padding: 2.5rem;
+    }
+
+    .add-navbar-form input[type="text"] {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .add-navbar-form button[type="submit"] {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+.nav-addbtn1 {
+    padding: 0.75rem 1.2rem;
+    background-color: #318585;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+     cursor: pointer;
+     width: 100%;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+}   
+
+.nav-addbtn1:hover {
+    background-color: #326868;
+}
+
+.nav-remove {
+    padding: 0.75rem 1.2rem;
+    background-color: #ad3358;
+    color: #fff;
+    border: none;
+    width: 100%;
+margin-bottom: 1rem;
+     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-remove:hover {
+    background-color: #501641;
+}
