@@ -11,7 +11,7 @@ const Allortho = () => {
   useEffect(() => {
     const fetchOrthoServices = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/orthopedics/getall');
+        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/orthopedics/getall');
         setOrthoServices(response.data); 
       } catch (error) {
         console.error('Error fetching ortho services:', error);
@@ -36,7 +36,7 @@ const Allortho = () => {
           <button
             onClick={async () => {
               try {
-                await axios.delete(`http://localhost:3000/api/v1/orthopedics/delete/${id}`);
+                await axios.delete(`https://hospital-management-backend-3.onrender.com/api/v1/orthopedics/delete/${id}`);
                 toast.success("Item deleted successfully!");
                 setOrthoServices((prevData) => prevData.filter(item => item._id !== id));
               } catch (error) {

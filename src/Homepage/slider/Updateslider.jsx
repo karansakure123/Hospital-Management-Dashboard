@@ -16,7 +16,7 @@ const Updatehero = () => {
   useEffect(() => {
     const fetchHeroDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/hero/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-3.onrender.com/api/v1/hero/get/${id}`);
         setUpdateFormData({
           sliderImg: response.data.hero.sliderImg, // Fetch and set existing image URL
           heroFile: null, // Reset the file input
@@ -55,7 +55,7 @@ const Updatehero = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3000/api/v1/hero/update/${id}`, formData, {
+      await axios.put(`https://hospital-management-backend-3.onrender.com/api/v1/hero/update/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

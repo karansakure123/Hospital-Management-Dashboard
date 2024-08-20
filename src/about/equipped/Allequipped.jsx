@@ -11,7 +11,7 @@ const Allequipped = () => {
   useEffect(() => {
     const fetchEquippedData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/about/equipped/getall');
+        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/about/equipped/getall');
         if (response.data.success && Array.isArray(response.data.equipped)) {
           setEquipped(response.data.equipped);
         } else {
@@ -48,7 +48,7 @@ const handleUpdate = (eqp) => {
               onClick={async () => {
                 toast.dismiss(deleteToast);
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/about/equipped/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-3.onrender.com/api/v1/about/equipped/delete/${id}`);
                   toast.success("Equipped item deleted successfully!");
                   setEquipped(equipped.filter(eqp => eqp._id !== id));
                 } catch (error) {

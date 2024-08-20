@@ -12,7 +12,7 @@ const Accreditation = () => {
     const fetchAccreditation = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/about/accreditation/getall"
+          "https://hospital-management-backend-3.onrender.com/api/v1/about/accreditation/getall"
         );
         setAccreditation(response.data.accreditations);
       } catch (error) {
@@ -45,7 +45,7 @@ const Accreditation = () => {
                 toast.dismiss(deleteToast);
                 try {
                   await axios.delete(
-                    `http://localhost:3000/api/v1/about/accreditation/delete/${accId}`
+                    `https://hospital-management-backend-3.onrender.com/api/v1/about/accreditation/delete/${accId}`
                   );
                   toast.success("Accreditation deleted successfully!");
                   setAccreditation(

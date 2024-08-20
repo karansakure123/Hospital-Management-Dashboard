@@ -13,7 +13,7 @@ const Allslider = () => {
   useEffect(() => {
     const fetchHeroSections = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/hero/getall');
+        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/hero/getall');
         setHeroSections(response.data.heroes || []);
         setLoading(false);
       } catch (error) {
@@ -42,7 +42,7 @@ const Allslider = () => {
             onClick={async () => {
               toast.dismiss(confirmToast);
               try {
-                await axios.delete(`http://localhost:3000/api/v1/hero/delete/${id}`);
+                await axios.delete(`https://hospital-management-backend-3.onrender.coms/api/v1/hero/delete/${id}`);
                 toast.success("Item deleted successfully!");
                 setHeroSections((prevSections) => prevSections.filter(hero => hero._id !== id));
               } catch (error) {

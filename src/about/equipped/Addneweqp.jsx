@@ -23,7 +23,7 @@ const Addneweqp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/v1/about/equipped/addnew', formData);
+      await axios.post('https://hospital-management-backend-3.onrender.com/api/v1/about/equipped/addnew', formData);
       toast.success('Equipped item added successfully!');
       setFormData({ eqpHeading: '', eqpTitle: '', eqpImg: '' }); // Reset form
       navigate('/path-to-navigate'); // Change this to your desired route

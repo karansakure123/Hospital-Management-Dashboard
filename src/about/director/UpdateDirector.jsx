@@ -31,7 +31,7 @@ const UpdateDirector = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`http://localhost:3000/api/v1/about/director/update/${director._id}`, formData);
+      const response = await axios.put(`https://hospital-management-backend-3.onrender.com/api/v1/about/director/update/${director._id}`, formData);
       toast.success("Director updated successfully!");
       navigate('/about/director/getall');
     } catch (error) {

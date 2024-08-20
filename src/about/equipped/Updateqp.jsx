@@ -44,7 +44,7 @@ const Updateqp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/v1/about/equipped/update/${id}`, formData);
+      await axios.put(`https://hospital-management-backend-3.onrender.com/api/v1/about/equipped/update/${id}`, formData);
       toast.success('Equipped item updated successfully!');
       navigate('/about/equipped/getall');
     } catch (error) {

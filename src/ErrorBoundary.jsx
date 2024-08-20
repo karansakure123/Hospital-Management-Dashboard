@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/user/admin/me",
+          "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/me",
           { withCredentials: true }
         );
         setIsAuthenticated(true);
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       // Call your logout API if needed
-      await axios.post("http://localhost:3000/api/v1/user/admin/logout", {}, { withCredentials: true });
+      await axios.post("https://hospital-management-backend-3.onrender.com/api/v1/user/admin/logout", {}, { withCredentials: true });
       
       setIsAuthenticated(false);
       setAdmin({});

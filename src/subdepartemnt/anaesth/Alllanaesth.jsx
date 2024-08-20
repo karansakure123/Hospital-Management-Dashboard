@@ -12,7 +12,7 @@ const Allanaesth = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/anaesthesio/getall');
+        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/anaesthesio/getall');
         const data = response.data;
         setExpCardsData(data);
         if (data.length > 0) {

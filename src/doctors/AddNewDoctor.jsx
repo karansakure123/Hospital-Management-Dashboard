@@ -71,7 +71,7 @@ const AddNewDoctor = () => {
       formData.append("specialty", specialty); // Append specialty to FormData
       formData.append("docAvatar", docAvatar);
 
-      const res = await axios.post("http://localhost:3000/api/v1/user/doctor/addnew", formData, {
+      const res = await axios.post("https://hospital-management-backend-3.onrender.com/api/v1/user/doctor/addnew", formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });

@@ -17,7 +17,7 @@ const Updateanaesth = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/anaesthesio/get/${id}`);
+        const response = await fetch(`https://hospital-management-backend-3.onrender.com/api/v1/anaesthesio/get/${id}`);
         const data = await response.json();
         setFormData({
           title: data.title,
@@ -48,7 +48,7 @@ const Updateanaesth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/anaesthesio/update/${id}`, {
+      const response = await fetch(`https://hospital-management-backend-3.onrender.com/api/v1/anaesthesio/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

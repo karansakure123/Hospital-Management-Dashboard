@@ -11,7 +11,7 @@ const AllDirector = () => {
     useEffect(() => {
         const fetchDirectors = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/v1/about/director/getall'); // API endpoint
+                const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/about/director/getall'); // API endpoint
                 console.log("API Response:", response.data); // Log the entire API response
 
                 // Check if the data structure is as expected
@@ -40,7 +40,7 @@ const AllDirector = () => {
     // Handle delete
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/api/v1/about/director/${id}`); // API endpoint for deletion
+            await axios.delete(`https://hospital-management-backend-3.onrender.com/api/v1/about/director/${id}`); // API endpoint for deletion
             toast.success("Director deleted successfully!");
             // Refresh the director list after deletion
             setDirector(director.filter(dirc => dirc._id !== id));

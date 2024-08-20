@@ -11,7 +11,7 @@ const AllCorporate = () => {
   useEffect(() => {
     const fetchCorporate = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/about/corporate/getall");
+        const response = await axios.get("hhttps://hospital-management-backend-3.onrender.com/api/v1/about/corporate/getall");
         setCorporate(response.data.corporate);
       } catch (err) {
         console.error("Error fetching corporates:", err);
@@ -38,7 +38,7 @@ const AllCorporate = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast);
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/about/corporate/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-3.onrender.com/api/v1/about/corporate/delete/${id}`);
                   toast.success("Corporate item deleted successfully!");
                   setCorporate(corporate.filter(corp => corp._id !== id));
                 } catch (error) {

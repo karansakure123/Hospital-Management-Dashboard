@@ -15,7 +15,7 @@ const AllDoctors = () => {
         const fetchDoctors = async () => {
             try {
                 const { data } = await axios.get(
-                    "http://localhost:3000/api/v1/user/doctors",
+                    "https://hospital-management-backend-3.onrender.com/api/v1/user/doctors",
                     { withCredentials: true }
                 );
                 console.log(data.doctors); // Log the fetched doctors to check the structure

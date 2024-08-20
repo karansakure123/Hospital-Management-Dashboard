@@ -18,7 +18,7 @@ const UpdateOrtho = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/orthopedics/get/${id}`);
+        const response = await fetch(`https://hospital-management-backend-3.onrender.com/api/v1/orthopedics/get/${id}`);
         const data = await response.json();
         setFormData({
           title: data.title,
