@@ -33,7 +33,7 @@ const AddDept = () => {
     };
 
     try {
-      const response = await axios.post('https://hospital-management-backend-1-cl2h.onrender.com/api/v1/departments/addnew', formData, {
+      const response = await axios.post('http://localhost:3000/api/v1/departments/addnew', formData, {
         headers: {
           'Content-Type': 'application/json',
         },

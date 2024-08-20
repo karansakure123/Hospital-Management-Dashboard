@@ -26,7 +26,7 @@ const UpdateDoctor = () => {
     useEffect(() => {
         const fetchDoctor = async () => {
             try {
-                const response = await axios.put(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/user/doctors/update/${id}`, { withCredentials: true });
+                const response = await axios.put(`http://localhost:3000/api/v1/user/doctors/update/${id}`, { withCredentials: true });
                 setDoctorData(response.data.doctor); // Assuming your API returns the doctor data under `data.doctor`
             } catch (error) {
                 toast.error(error.response?.data?.message || "Failed to fetch doctor data.");
@@ -62,7 +62,7 @@ const UpdateDoctor = () => {
         }
 
         try {
-            await axios.put(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/user/doctors/update/${id}`, formData, {
+            await axios.put(`http://localhost:3000/api/v1/user/doctors/update/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

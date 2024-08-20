@@ -16,7 +16,7 @@ const UpdateDepartment = () => {
   const fetchDepartment = async () => {
     try {
       console.log(`Fetching department with ID: ${id}`); // Debug log
-      const response = await axios.get(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/departments/${id}`);
+      const response = await axios.get(`http://localhost:3000/api/v1/departments/${id}`);
       if (response.data && response.data.department) {
         console.log('Department Data:', response.data); // Log full response for debugging
         setDepartment(response.data.department);
@@ -35,7 +35,7 @@ const UpdateDepartment = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/departments/update/${id}`, department);
+      await axios.put(`http://localhost:3000/api/v1/departments/update/${id}`, department);
       toast.success("Department updated successfully!");
       navigate('/departments'); // Navigate back to departments list
     } catch (error) {
