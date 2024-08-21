@@ -11,7 +11,7 @@ const Intro = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/intro/get');
+        const response = await axios.get('https://hospital-management-backend-1-cl2h.onrender.com/api/v1/intro/get');
         if (response.data.success && Array.isArray(response.data.intros)) {
           setWecData(response.data.intros);
         } else {

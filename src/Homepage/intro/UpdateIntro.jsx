@@ -19,7 +19,7 @@ const UpdateIntro = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/intro/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/intro/get/${id}`);
         if (response.data.success) {
           setFormData({
             Heading: response.data.intro.Heading,
