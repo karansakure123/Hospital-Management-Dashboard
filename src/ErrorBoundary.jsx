@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [admin, setAdmin] = useState({});
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -17,13 +17,13 @@ export const AuthProvider = ({ children }) => {
         );
         setIsAuthenticated(true);
         setAdmin(response.data.user);
-        localStorage.setItem("isAuthenticated", "true"); // Store authentication status
+        localStorage.setItem("isAuthenticated", "true");
       } catch (error) {
         setIsAuthenticated(false);
         setAdmin({});
-        localStorage.removeItem("isAuthenticated"); // Clear status on error
+        localStorage.removeItem("isAuthenticated");
       } finally {
-        setLoading(false); // Set loading to false after fetch
+        setLoading(false);
       }
     };
 
@@ -32,19 +32,21 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      // Call your logout API if needed
-      await axios.post("https://hospital-management-backend-3.onrender.com/api/v1/user/admin/logout", {}, { withCredentials: true });
-      
+      await axios.post(
+        "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/logout",
+        {},
+        { withCredentials: true }
+      );
       setIsAuthenticated(false);
       setAdmin({});
-      localStorage.removeItem("isAuthenticated"); // Clear local storage
+      localStorage.removeItem("isAuthenticated");
     } catch (error) {
       console.error("Logout failed:", error);
     }
   };
 
   if (loading) {
-    return <div>Loading...</div>; // You can replace this with a loading spinner or message
+    return <div>Loading...</div>;
   }
 
   return (
