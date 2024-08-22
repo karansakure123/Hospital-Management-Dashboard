@@ -1,15 +1,16 @@
+// src/components/Login.js
 import React, { useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AuthContext } from '../context/AuthContext'; // Update path as needed
+import { AuthContext } from '../ErrorBoundary'; // Ensure correct path
 import axios from "axios";
 import "./login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [role, setRole] = useState("Admin");
+  const [confirmPassword, setConfirmPassword] = useState(""); // State for confirm password
+  const [role, setRole] = useState("Admin"); // Default role set to Admin
 
   const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
   const navigateTo = useNavigate();
@@ -19,7 +20,7 @@ const Login = () => {
     try {
       const res = await axios.post(
         "https://hospital-management-backend-3.onrender.com/api/v1/user/login",
-        { email, password, confirmPassword, role },
+        { email, password, confirmPassword, role }, // Send all fields
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
@@ -27,11 +28,11 @@ const Login = () => {
       );
       toast.success(res.data.message);
       setIsAuthenticated(true);
-      localStorage.setItem("isAuthenticated", "true");
-      navigateTo("/");
+      localStorage.setItem("isAuthenticated", "true"); // Store authentication status
+      navigateTo("/"); // Redirect to home after login
       setEmail("");
       setPassword("");
-      setConfirmPassword("");
+      setConfirmPassword(""); // Reset confirm password
     } catch (error) {
       toast.error(error.response?.data?.message || "An error occurred");
     }
@@ -48,7 +49,7 @@ const Login = () => {
       <p className="admin-login-subtitle">Only Admins Are Allowed To Access These Resources!</p>
       <form onSubmit={handleLogin} className="admin-login-form">
         <input
-          type="email"
+          type="email" // Changed from "text" to "email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -73,7 +74,7 @@ const Login = () => {
         />
         <select
           value={role}
-          onChange={(e) => setRole(e.target.value)}
+          onChange={(e) => setRole(e.target.value)} // Update role based on selection
           className="admin-login-input"
         >
           <option value="Admin">Admin</option>
