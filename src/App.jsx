@@ -66,13 +66,16 @@ import AddCardio from "./subdepartemnt/cardio/Addcardio";
 import Allortho from "./subdepartemnt/ortho/Allortho";
 import Updateortho from "./subdepartemnt/ortho/Updateortho";
 import Addortho from "./subdepartemnt/ortho/Addortho";
-
+import { useContext } from "react";
+ 
 const App = () => {
   const { isAuthenticated, loading, logout } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout();
   };
+
+   
 
   if (loading) {
     return <div>Loading...</div>;
