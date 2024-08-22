@@ -1,8 +1,7 @@
-// src/components/Login.js
 import React, { useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AuthContext } from '../ErrorBoundary'; // Ensure correct path
+import { AuthContext } from '../ErrorBoundary';  
 import axios from "axios";
 import "./login.css";
 

@@ -1,34 +1,56 @@
 import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
-// Create AuthContext
 export const AuthContext = createContext();
 
-// Create a provider component
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [admin, setAdmin] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // On app load, check if the user is authenticated
-    const token = localStorage.getItem("authToken");
-    if (token) {
-      setIsAuthenticated(true);
-    }
-    setLoading(false);
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get(
+          "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/me",
+          { withCredentials: true }
+        );
+        setIsAuthenticated(true);
+        setAdmin(response.data.user);
+        localStorage.setItem("isAuthenticated", "true");
+      } catch (error) {
+        setIsAuthenticated(false);
+        setAdmin({});
+        localStorage.removeItem("isAuthenticated");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
   }, []);
 
-  const login = (token) => {
-    localStorage.setItem("authToken", token);
-    setIsAuthenticated(true);
+  const logout = async () => {
+    try {
+      await axios.post(
+        "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/logout",
+        {},
+        { withCredentials: true }
+      );
+      setIsAuthenticated(false);
+      setAdmin({});
+      localStorage.removeItem("isAuthenticated");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
 
-  const logout = () => {
-    localStorage.removeItem("authToken");
-    setIsAuthenticated(false);
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, loading, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, admin, setAdmin, logout }}>
       {children}
     </AuthContext.Provider>
   );
