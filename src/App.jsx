@@ -69,6 +69,7 @@ import Updateortho from "./subdepartemnt/ortho/Updateortho";
 import Addortho from "./subdepartemnt/ortho/Addortho";
 import { useContext } from "react";
 import { AuthContext } from "./ErrorBoundary";
+import { ToastContainer } from "react-toastify";
  
 const App = () => {
   const { isAuthenticated, loading, logout } = useContext(AuthContext);
