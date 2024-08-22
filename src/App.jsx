@@ -1,5 +1,6 @@
+ 
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-// App component
 import Sidebar from "./dashboard/Sidebar";
 import Login from "./login/Login";
 import Messages from "./messages/Messages";
