@@ -1,64 +1,35 @@
-// src/context/AuthContext.js
 import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
+// Create AuthContext
 export const AuthContext = createContext();
 
+// Create a provider component
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [admin, setAdmin] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get(
-          "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/me",
-          { withCredentials: true }
-        );
-        setIsAuthenticated(true);
-        setAdmin(response.data.user);
-        localStorage.setItem("isAuthenticated", "true");
-      } catch (error) {
-        setIsAuthenticated(false);
-        setAdmin({});
-        localStorage.removeItem("isAuthenticated");
-        toast.error("Failed to fetch user data. Please log in again.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUser();
+    // On app load, check if the user is authenticated
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setIsAuthenticated(true);
+    }
+    setLoading(false);
   }, []);
 
-  const logout = async () => {
-    try {
-      await axios.post(
-        "https://hospital-management-backend-3.onrender.com/api/v1/user/admin/logout",
-        {},
-        { withCredentials: true }
-      );
-      setIsAuthenticated(false);
-      setAdmin({});
-      localStorage.removeItem("isAuthenticated");
-      toast.success("Successfully logged out!");
-    } catch (error) {
-      toast.error("Logout failed. Please try again.");
-      console.error("Logout failed:", error);
-    }
+  const login = (token) => {
+    localStorage.setItem("authToken", token);
+    setIsAuthenticated(true);
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    setIsAuthenticated(false);
+  };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, admin, setAdmin, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, loading, login, logout }}>
       {children}
-      <ToastContainer />
     </AuthContext.Provider>
   );
 };
