@@ -1,6 +1,10 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+// AuthContext and AuthProvider
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -40,6 +44,7 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(false);
       setAdmin({});
       localStorage.removeItem("isAuthenticated");
+      toast.success("Successfully logged out!");
     } catch (error) {
       console.error("Logout failed:", error);
     }
