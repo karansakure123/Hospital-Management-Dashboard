@@ -67,6 +67,7 @@ import Allortho from "./subdepartemnt/ortho/Allortho";
 import Updateortho from "./subdepartemnt/ortho/Updateortho";
 import Addortho from "./subdepartemnt/ortho/Addortho";
 import { useContext } from "react";
+import { AuthContext } from "./ErrorBoundary";
  
 const App = () => {
   const { isAuthenticated, loading, logout } = useContext(AuthContext);
