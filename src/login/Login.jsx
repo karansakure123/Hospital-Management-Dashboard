@@ -21,10 +21,17 @@ const Login = () => {
         "https://hospital-management-backend-3.onrender.com/api/v1/user/login",
         { email, password, confirmPassword, role }, // Send all fields
         {
-          withCredentials: true,
+          withCredentials: true, // Ensure credentials are sent with the request
           headers: { "Content-Type": "application/json" },
         }
       );
+
+      // Check if the role from the response matches the selected role
+      if (res.data.role !== role) {
+        toast.error("Unauthorized role");
+        return;
+      }
+
       toast.success(res.data.message);
       setIsAuthenticated(true);
       localStorage.setItem("isAuthenticated", "true"); // Store authentication status
