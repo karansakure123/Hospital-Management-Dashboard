@@ -17,7 +17,7 @@ const Updateblog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/blog/get/${id}`);
+        const response = await fetch(`https://hospital-management-backend-4.onrender.com/api/v1/blog/get/${id}`);
         const data = await response.json();
         setBlog({
           title: data.title,
@@ -39,7 +39,7 @@ const Updateblog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/blog/update/${id}`, {
+      const response = await fetch(`https://hospital-management-backend-4.onrender.com/api/v1/blog/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

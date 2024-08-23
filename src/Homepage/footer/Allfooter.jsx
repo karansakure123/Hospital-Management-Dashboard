@@ -9,7 +9,7 @@ import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 const Allfooter = () => {
   const [links, setLinks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const apiUrl = 'http://localhost:3000/api/v1/footer/getall';
+  const apiUrl = 'https://hospital-management-backend-4.onrender.com/api/v1/footer/getall';
 
   const fetchLinks = async () => {
     try {
@@ -38,7 +38,7 @@ const Allfooter = () => {
           <button
             onClick={async () => {
               try {
-                const response = await axios.delete(`http://localhost:3000/api/v1/footer/delete/${itemId}`);
+                const response = await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/footer/delete/${itemId}`);
                 console.log(response);
 
                 // Update the state to reflect the deleted item

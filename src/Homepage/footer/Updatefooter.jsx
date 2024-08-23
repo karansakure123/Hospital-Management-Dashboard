@@ -8,7 +8,7 @@ const Updatefooter = () => {
   const navigate = useNavigate();
   const [footerLink, setFooterLink] = useState(null);
   const [loading, setLoading] = useState(true);
-  const apiUrl = `http://localhost:3000/api/v1/footer/get/${id}`;
+  const apiUrl = `https://hospital-management-backend-4.onrender.com/api/v1/footer/get/${id}`;
 
   // Fetch existing footer link details
   const fetchFooterLink = async () => {
@@ -34,7 +34,7 @@ const Updatefooter = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/footer/update/${id}`, {
+      const response = await fetch(`https://hospital-management-backend-4.onrender.com/api/v1/footer/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

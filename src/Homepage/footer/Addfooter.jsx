@@ -29,7 +29,7 @@ const Addfooter = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/footer/addnew', {
+      const response = await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/footer/addnew', {
         title,
         items,
       });

@@ -22,7 +22,7 @@ const Addhealth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/v1/health/addnew', formData);
+      await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/health/addnew', formData);
       toast.success('Health item added successfully!');
       navigate('/health/getall');
     } catch (error) {

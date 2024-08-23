@@ -17,7 +17,7 @@ const Updatehealth = () => {
   useEffect(() => {
     const fetchHealthData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/health/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/health/get/${id}`);
         setFormData(response.data); // Populate the form with the fetched data
       } catch (error) {
         console.error('Error fetching health data:', error);
@@ -37,7 +37,7 @@ const Updatehealth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/v1/health/update/${id}`, formData);
+      await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/health/update/${id}`, formData);
       toast.success('Health item updated successfully!');
       navigate('/health/getall'); // Redirect after successful update
     } catch (error) {

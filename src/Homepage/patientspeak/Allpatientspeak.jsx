@@ -11,7 +11,7 @@ const Allpatientspeak = () => {
   useEffect(() => {
     const fetchPatientSpeaks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/patientspeak/getall');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/patientspeak/getall');
         setPatientSpeaks(response.data);
       } catch (error) {
         console.error('Error fetching patient speaks:', error);
@@ -39,7 +39,7 @@ const Allpatientspeak = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast); // Dismiss the loading toast
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/patientspeak/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/patientspeak/delete/${id}`);
                   toast.success("Patient speak deleted successfully!");
                   setPatientSpeaks(patientSpeaks.filter((speak) => speak._id !== id)); // Update state to remove the deleted item
                 } catch (error) {

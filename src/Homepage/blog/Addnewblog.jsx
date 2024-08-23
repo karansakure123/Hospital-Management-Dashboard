@@ -16,7 +16,7 @@ const Addnewblog = () => {
     const newBlog = { title, excerpt, author, image };
     
     try {
-      const response = await fetch('http://localhost:3000/api/v1/blog/addnew', {
+      const response = await fetch('https://hospital-management-backend-4.onrender.com/api/v1/blog/addnew', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

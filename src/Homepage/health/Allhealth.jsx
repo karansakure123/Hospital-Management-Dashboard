@@ -13,7 +13,7 @@ const Allhealth = () => {
   useEffect(() => {
     const fetchHealthData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/health/getall');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/health/getall');
         setHealthData(response.data); // Assuming the data is returned in the response body
       } catch (error) {
         console.error('Error fetching health data:', error);
@@ -38,7 +38,7 @@ const Allhealth = () => {
             onClick={async () => {
               toast.dismiss(confirmToast); // Dismiss confirmation toast
               try {
-                await axios.delete(`http://localhost:3000/api/v1/health/delete/${id}`);
+                await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/health/delete/${id}`);
                 toast.success("Item deleted successfully!");
                 setHealthData((prevData) => prevData.filter(item => item._id !== id)); // Update state to remove deleted item
               } catch (error) {

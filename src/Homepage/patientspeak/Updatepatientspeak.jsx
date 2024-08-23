@@ -13,7 +13,7 @@ const Updatepatientspeak = () => {
   useEffect(() => {
     const fetchPatientSpeak = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/patientspeak/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/patientspeak/get/${id}`);
         setPatientSpeak(response.data);
       } catch (error) {
         console.error('Error fetching patient speak:', error);

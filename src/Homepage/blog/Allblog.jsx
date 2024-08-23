@@ -11,7 +11,7 @@ const Allblog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/v1/blog/getall');
+        const response = await fetch('https://hospital-management-backend-4.onrender.com/api/v1/blog/getall');
         const data = await response.json();
         setBlogs(data);
       } catch (error) {
@@ -41,7 +41,7 @@ const Allblog = () => {
                 toast.dismiss(deleteToast);
                 try {
                   // Make the DELETE request to your API
-                  const response = await axios.delete(`http://localhost:3000/api/v1/blog/delete/${id}`);
+                  const response = await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/blog/delete/${id}`);
                   if (response.status === 200) {
                     toast.success('Blog deleted successfully!');
                     setBlogs(blogs.filter((blog) => blog._id !== id)); // Update the state
