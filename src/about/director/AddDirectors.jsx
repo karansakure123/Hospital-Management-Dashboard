@@ -22,7 +22,7 @@ const AddDirectors = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/about/directors/addnew', formData);
+      await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/about/director/addnew', formData);
       toast.success('Directors added successfully!');
       setFormData({ dircTitle: '', dircDesc1: '', dircDesc2: '', dircImg: '' }); // Reset form
     } catch (error) {
