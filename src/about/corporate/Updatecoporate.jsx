@@ -44,7 +44,7 @@ const Updatecorporate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://hospital-management-backend-3.onrender.com/api/v1/about/corporate/update/${id}`, formData);
+      await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/about/corporate/update/${id}`, formData);
       toast.success('Corporate item updated successfully!');
       navigate('/about/corporate/getall');
     } catch (error) {
