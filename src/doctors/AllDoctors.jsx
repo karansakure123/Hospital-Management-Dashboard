@@ -5,10 +5,9 @@ import "./style/alldoct.css";
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 import { Navigate, useNavigate } from 'react-router-dom';
 
-const AllDoctors = () => {
+const AllDoctors = () => { 
     const [doctors, setDoctors] = useState([]);
-    const { isAuthenticated } = useContext(AuthContext);
-    const navigate = useNavigate();
+     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchDoctors = async () => {
