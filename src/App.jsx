@@ -131,9 +131,9 @@ const App = () => {
               <Route path="/cardiology/update/:id" element={<UpdateCardio />} />
               <Route path="/cardiology/addnew" element={<AddCardio />} />
 
-              <Route path="/orthopaedic/getall" element={<Allortho />} />
-              <Route path="/orthopaedic/update/:id" element={<Updateortho />} />
-              <Route path="/orthopaedic/addnew" element={<Addortho />} />
+              <Route path="/orthopaedics/getall" element={<Allortho />} />
+              <Route path="/orthopaedics/update/:id" element={<Updateortho />} />
+              <Route path="/orthopaedics/addnew" element={<Addortho />} />
 
               <Route path="/addnewadmin" element={<AddNewAdmin />} />
 
