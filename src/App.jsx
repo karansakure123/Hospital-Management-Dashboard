@@ -1,5 +1,4 @@
- 
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Sidebar from "./dashboard/Sidebar";
 import Login from "./login/Login";
@@ -67,119 +66,106 @@ import AddCardio from "./subdepartemnt/cardio/Addcardio";
 import Allortho from "./subdepartemnt/ortho/Allortho";
 import Updateortho from "./subdepartemnt/ortho/Updateortho";
 import Addortho from "./subdepartemnt/ortho/Addortho";
-import { useContext } from "react";
-import { AuthContext } from "./ErrorBoundary";
 import { ToastContainer } from "react-toastify";
- 
+
 const App = () => {
-  const { isAuthenticated, loading, logout } = useContext(AuthContext);
-
-  const handleLogout = () => {
-    logout();
-  };
-
-   
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Router>
       <div className="app">
         <div className="layout">
-          {isAuthenticated && <Sidebar onLogout={handleLogout} />}
+          {/* Sidebar is always visible now */}
+          <Sidebar />
           <div className="wrapper">
             <Routes>
-              <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
+              {/* Public routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
 
-              {isAuthenticated ? (
-                <>
-                  <Route path="/navbar" element={<AllNavbar />} />
-                  <Route path="/navbar/addnew" element={<Addnavbar />} />
-                  <Route path="/navbar/update/:id" element={<UpdateNavbar />} />
-                  <Route path="/intro/getall" element={<Intro />} />
-                  <Route path="/intro/update/:id" element={<UpdateIntro />} />
-                  <Route path="/intro/addnew" element={<AddIntro />} />
+              {/* Restricted routes */}
+              <Route path="/navbar" element={<AllNavbar />} />
+              <Route path="/navbar/addnew" element={<Addnavbar />} />
+              <Route path="/navbar/update/:id" element={<UpdateNavbar />} />
+              <Route path="/intro/getall" element={<Intro />} />
+              <Route path="/intro/update/:id" element={<UpdateIntro />} />
+              <Route path="/intro/addnew" element={<AddIntro />} />
 
-                  <Route path="/whowe/getall" element={<Allwhowe />} />
-                  <Route path="/whowe/update/:id" element={<Updatewhowe />} />
-                  <Route path="/whowe/addnew" element={<Addnewwho />} />
+              <Route path="/whowe/getall" element={<Allwhowe />} />
+              <Route path="/whowe/update/:id" element={<Updatewhowe />} />
+              <Route path="/whowe/addnew" element={<Addnewwho />} />
 
-                  <Route path="/csr/getall" element={<Allcsr />} />
-                  <Route path="/csr/update/:id" element={<Updatecsr />} />
-                  <Route path="/csr/addnew" element={<Addcsr />} />
+              <Route path="/csr/getall" element={<Allcsr />} />
+              <Route path="/csr/update/:id" element={<Updatecsr />} />
+              <Route path="/csr/addnew" element={<Addcsr />} />
 
-                  <Route path="/blog/getall" element={<Allblog />} />
-                  <Route path="/blog/update/:id" element={<Updateblog />} />
-                  <Route path="/blog/addnew" element={<Addnewblog />} />
+              <Route path="/blog/getall" element={<Allblog />} />
+              <Route path="/blog/update/:id" element={<Updateblog />} />
+              <Route path="/blog/addnew" element={<Addnewblog />} />
 
-                  <Route path="/Testimonials/getall" element={<AllTestim />} />
-                  <Route path="/Testimonials/update/:id" element={<UpdateTest />} />
-                  <Route path="/Testimonials/addnew" element={<AddTestim />} />
+              <Route path="/Testimonials/getall" element={<AllTestim />} />
+              <Route path="/Testimonials/update/:id" element={<UpdateTest />} />
+              <Route path="/Testimonials/addnew" element={<AddTestim />} />
 
-                  <Route path="/patientspeak/getall" element={<Allpatientspeak />} />
-                  <Route path="/patientspeak/update/:id" element={<Updatepatientspeak />} />
-                  <Route path="/patientspeak/addnew" element={<Addpatientspeak />} />
+              <Route path="/patientspeak/getall" element={<Allpatientspeak />} />
+              <Route path="/patientspeak/update/:id" element={<Updatepatientspeak />} />
+              <Route path="/patientspeak/addnew" element={<Addpatientspeak />} />
 
-                  <Route path="/infra/getall" element={<Allinfra />} />
-                  <Route path="/infra/update/:id" element={<Updateinfra />} />
-                  <Route path="/infra/addnew" element={<Newinfra />} />
+              <Route path="/infra/getall" element={<Allinfra />} />
+              <Route path="/infra/update/:id" element={<Updateinfra />} />
+              <Route path="/infra/addnew" element={<Newinfra />} />
 
-                  <Route path="/footer/getall" element={<Allfooter />} />
-                  <Route path="/footer/update/:id" element={<Updatefooter />} />
-                  <Route path="/footer/addnew" element={<Addfooter />} />
+              <Route path="/footer/getall" element={<Allfooter />} />
+              <Route path="/footer/update/:id" element={<Updatefooter />} />
+              <Route path="/footer/addnew" element={<Addfooter />} />
 
-                  <Route path="/health/getall" element={<Allhealth />} />
-                  <Route path="/health/update/:id" element={<Updatehalth />} />
-                  <Route path="/health/addnew" element={<Addhealth />} />
+              <Route path="/health/getall" element={<Allhealth />} />
+              <Route path="/health/update/:id" element={<Updatehalth />} />
+              <Route path="/health/addnew" element={<Addhealth />} />
 
-                  <Route path="/hero/getall" element={<Allslider />} />
-                  <Route path="/hero/update/:id" element={<Updateslider />} />
-                  <Route path="/hero/addnew" element={<Addslider />} />
+              <Route path="/hero/getall" element={<Allslider />} />
+              <Route path="/hero/update/:id" element={<Updateslider />} />
+              <Route path="/hero/addnew" element={<Addslider />} />
 
-                  <Route path="/anaesth/getall" element={<Alllanaesth />} />
-                  <Route path="/anaesth/update/:id" element={<Updateanaesth />} />
-                  <Route path="/anaesth/addnew" element={<Addanaesth />} />
+              <Route path="/anaesth/getall" element={<Alllanaesth />} />
+              <Route path="/anaesth/update/:id" element={<Updateanaesth />} />
+              <Route path="/anaesth/addnew" element={<Addanaesth />} />
 
-                  <Route path="/cardiology/getall" element={<AllCardio />} />
-                  <Route path="/cardiology/update/:id" element={<UpdateCardio />} />
-                  <Route path="/cardiology/addnew" element={<AddCardio />} />
+              <Route path="/cardiology/getall" element={<AllCardio />} />
+              <Route path="/cardiology/update/:id" element={<UpdateCardio />} />
+              <Route path="/cardiology/addnew" element={<AddCardio />} />
 
-                  <Route path="/orthopaedic/getall" element={<Allortho />} />
-                  <Route path="/orthopaedic/update/:id" element={<Updateortho />} />
-                  <Route path="/orthopaedic/addnew" element={<Addortho />} />
+              <Route path="/orthopaedic/getall" element={<Allortho />} />
+              <Route path="/orthopaedic/update/:id" element={<Updateortho />} />
+              <Route path="/orthopaedic/addnew" element={<Addortho />} />
 
-                  <Route path="/addnewadmin" element={<AddNewAdmin />} />
-                  <Route path="/appointments" element={<Appointments />} />
-                  <Route path="/alldoctors" element={<AllDoctors />} />
-                  <Route path="/updatedoctor/:id" element={<UpdateDoctor />} />
-                  <Route path="/adddoctor" element={<AddNewDoctor />} />
-                  <Route path="/alldepartment" element={<AllDepartment />} />
-                  <Route path="/updatedepartment/:id" element={<UpdateDepartment />} />
-                  <Route path="/adddept" element={<AddDept />} />
-                  <Route path="/messages" element={<Messages />} />
-                  <Route path="/about/accredetation/getall" element={<GetAccreditation />} />
-                  <Route path="/about/accredetation/update/:id" element={<UpdateAccreditation />} />
-                  <Route path="/about/accredetation/addnew" element={<AddNewAcc />} />
-                  <Route path="/about/director/getall" element={<AllDirector />} />
-                  <Route path="/about/director/update/:id" element={<UpdateDirector />} />
-                  <Route path="/about/director/addnew" element={<AddDirectors />} />
-                  <Route path="/about/equipped/getall" element={<Allequipped />} />
-                  <Route path="/about/equipped/update/:id" element={<Updateqp />} />
-                  <Route path="/about/equipped/addnew" element={<Addneweqp />} />
-                  <Route path="/about/corporate/getall" element={<Allcorporate />} />
-                  <Route path="/about/corporate/update/:id" element={<Updatecoporate />} />
-                  <Route path="/about/corporate/addnew" element={<AddNewCorporate />} />
-                </>
-              ) : (
-                <Route path="/login" element={<Login />} />
-              )}
+              <Route path="/addnewadmin" element={<AddNewAdmin />} />
+              <Route path="/appointments" element={<Appointments />} />
+              <Route path="/alldoctors" element={<AllDoctors />} />
+              <Route path="/updatedoctor/:id" element={<UpdateDoctor />} />
+              <Route path="/adddoctor" element={<AddNewDoctor />} />
+              <Route path="/alldepartment" element={<AllDepartment />} />
+              <Route path="/updatedepartment/:id" element={<UpdateDepartment />} />
+              <Route path="/adddept" element={<AddDept />} />
+              <Route path="/messages" element={<Messages />} />
+              <Route path="/about/accredetation/getall" element={<GetAccreditation />} />
+              <Route path="/about/accredetation/update/:id" element={<UpdateAccreditation />} />
+              <Route path="/about/accredetation/addnew" element={<AddNewAcc />} />
+              <Route path="/about/director/getall" element={<AllDirector />} />
+              <Route path="/about/director/update/:id" element={<UpdateDirector />} />
+              <Route path="/about/director/addnew" element={<AddDirectors />} />
+              <Route path="/about/equipped/getall" element={<Allequipped />} />
+              <Route path="/about/equipped/update/:id" element={<Updateqp />} />
+              <Route path="/about/equipped/addnew" element={<Addneweqp />} />
+              <Route path="/about/corporate/getall" element={<Allcorporate />} />
+              <Route path="/about/corporate/update/:id" element={<Updatecoporate />} />
+              <Route path="/about/corporate/addnew" element={<AddNewCorporate />} />
+
+              {/* Default route */}
+              <Route path="*" element={<Home />} />
             </Routes>
           </div>
         </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </Router>
   );
 };
