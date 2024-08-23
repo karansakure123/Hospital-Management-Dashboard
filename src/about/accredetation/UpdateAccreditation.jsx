@@ -69,7 +69,7 @@ const UpdateAccreditation = () => {
         accImg: formData.accImg, // Send the image URL here
       });
       toast.success("Accreditation updated successfully!");
-      navigate('/about/accreditation/getall');
+      navigate('/about/accredetation/getall');
     } catch (error) {
       console.error("Error updating accreditation:", error.response ? error.response.data : error.message);
       toast.error(error.response?.data?.message || 'Failed to update accreditation!');

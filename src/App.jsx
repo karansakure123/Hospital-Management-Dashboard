@@ -136,23 +136,32 @@ const App = () => {
               <Route path="/orthopaedic/addnew" element={<Addortho />} />
 
               <Route path="/addnewadmin" element={<AddNewAdmin />} />
+
+              
               <Route path="/appointments" element={<Appointments />} />
-              <Route path="/alldoctors" element={<AllDoctors />} />
-              <Route path="/updatedoctor/:id" element={<UpdateDoctor />} />
-              <Route path="/adddoctor" element={<AddNewDoctor />} />
-              <Route path="/alldepartment" element={<AllDepartment />} />
-              <Route path="/updatedepartment/:id" element={<UpdateDepartment />} />
-              <Route path="/adddept" element={<AddDept />} />
+              <Route path="/doctor/getall" element={<AllDoctors />} />
+              <Route path="/doctor/update/:id" element={<UpdateDoctor />} />
+              <Route path="/doctor/addnew" element={<AddNewDoctor />} />
+              
+              <Route path="/department/getall" element={<AllDepartment />} />
+              <Route path="/department/update/:id" element={<UpdateDepartment />} />
+              <Route path="/department/addnew" element={<AddDept />} />
+              
               <Route path="/messages" element={<Messages />} />
+              
+              
               <Route path="/about/accredetation/getall" element={<GetAccreditation />} />
               <Route path="/about/accredetation/update/:id" element={<UpdateAccreditation />} />
               <Route path="/about/accredetation/addnew" element={<AddNewAcc />} />
+              
               <Route path="/about/director/getall" element={<AllDirector />} />
               <Route path="/about/director/update/:id" element={<UpdateDirector />} />
               <Route path="/about/director/addnew" element={<AddDirectors />} />
+              
               <Route path="/about/equipped/getall" element={<Allequipped />} />
               <Route path="/about/equipped/update/:id" element={<Updateqp />} />
               <Route path="/about/equipped/addnew" element={<Addneweqp />} />
+              
               <Route path="/about/corporate/getall" element={<Allcorporate />} />
               <Route path="/about/corporate/update/:id" element={<Updatecoporate />} />
               <Route path="/about/corporate/addnew" element={<AddNewCorporate />} />
