@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../ErrorBoundary";
-import { Navigate } from "react-router-dom";
+ import { Navigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
@@ -45,10 +44,7 @@ const Appointment = () => {
     }
   };
 
-  const { isAuthenticated, admin } = useContext(AuthContext);
-  if (!isAuthenticated) {
-    return <Navigate to={"/login"} />;
-  }
+  
 
   return (
     <section className="appointment-dashboard page">

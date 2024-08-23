@@ -1,13 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AuthContext } from '../ErrorBoundary'; // Import AuthContext
-import axios from "axios";
+ import axios from "axios";
 import "./style/add_doctor.css";
 
 const AddNewDoctor = () => {
-  const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-
+ 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -97,10 +95,7 @@ const AddNewDoctor = () => {
       toast.error(errorMessage);
     }
   };
-
-  if (!isAuthenticated) {
-    return <Navigate to={"/login"} />;
-  }
+ 
 
   return (
     <section className="add-doctor-page">

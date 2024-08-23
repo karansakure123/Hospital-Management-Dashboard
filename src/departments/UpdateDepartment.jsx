@@ -37,7 +37,7 @@ const UpdateDepartment = () => {
     try {
       await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/departments/update/${id}`, department);
       toast.success("Department updated successfully!");
-      navigate('/departments'); // Navigate back to departments list
+      navigate('/departments/getall'); // Navigate back to departments list
     } catch (error) {
       toast.error("Failed to update department!");
       console.error("Error updating department:", error.response ? error.response.data : error.message);
