@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Sidebar from "./dashboard/Sidebar";
-import Login from "./login/Login";
-import Messages from "./messages/Messages";
+ import Messages from "./messages/Messages";
 import AddNewAdmin from "./admin/AddNewAdmin";
 import Appointments from "./appointment/Appointment";
 import AddNewDoctor from "./doctors/AddNewDoctor";
@@ -79,8 +78,7 @@ const App = () => {
             <Routes>
               {/* Public routes */}
               <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-
+ 
               {/* Restricted routes */}
               <Route path="/navbar" element={<AllNavbar />} />
               <Route path="/navbar/addnew" element={<Addnavbar />} />
