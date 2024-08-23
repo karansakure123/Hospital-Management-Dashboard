@@ -37,7 +37,7 @@ const AddCardio = () => {
 
       if (response.status === 201) {
         toast.success('Cardiology Service created successfully!');
-        navigate('/cardiogy/getall');
+        navigate('/cardilogy/getall');
       }
     } catch (error) {
       toast.error('Failed to create service: ' + error.message);
