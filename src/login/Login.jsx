@@ -26,14 +26,15 @@ const Login = () => {
         }
       );
 
-      // Check if the role from the response matches the selected role
-      if (res.data.role !== role) {
-        toast.error("Unauthorized role");
-        return;
-      }
-
       toast.success(res.data.message);
       setIsAuthenticated(true);
+
+      // Save the token for 7 days
+      const token = res.data.token;
+      const expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + 7);
+      localStorage.setItem("authToken", JSON.stringify({ token, expirationDate }));
+
       localStorage.setItem("isAuthenticated", "true"); // Store authentication status
       navigateTo("/"); // Redirect to home after login
       setEmail("");
@@ -55,7 +56,7 @@ const Login = () => {
       <p className="admin-login-subtitle">Only Admins Are Allowed To Access These Resources!</p>
       <form onSubmit={handleLogin} className="admin-login-form">
         <input
-          type="email" // Changed from "text" to "email"
+          type="email" 
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -80,7 +81,7 @@ const Login = () => {
         />
         <select
           value={role}
-          onChange={(e) => setRole(e.target.value)} // Update role based on selection
+          onChange={(e) => setRole(e.target.value)} 
           className="admin-login-input"
         >
           <option value="Admin">Admin</option>
