@@ -18,7 +18,7 @@ const UpdateTest = () => {
   useEffect(() => {
     const fetchTestimonial = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/testimonial/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/testimonial/get/${id}`);
         setTestimonial(response.data);
       } catch (error) {
         toast.error('Failed to fetch testimonial details.');
@@ -38,7 +38,7 @@ const UpdateTest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/v1/testimonial/update/${id}`, testimonial);
+      await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/testimonial/update/${id}`, testimonial);
       toast.success('Testimonial updated successfully!');
       navigate('/testimonials/getall'); // Redirect after successful update
     } catch (error) {

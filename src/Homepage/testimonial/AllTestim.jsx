@@ -13,7 +13,7 @@ const AllTestim = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/testimonial/getall");
+        const response = await axios.get("https://hospital-management-backend-4.onrender.com/api/v1/testimonial/getall");
         console.log("Response Data:", response.data); // Log to ensure correct data
 
         // Delay for 3 seconds before setting testimonials and loading to false
@@ -41,7 +41,9 @@ const AllTestim = () => {
     const deleteToast = toast.loading("Deleting entry...", {
       duration: 0,
     });
-
+ 
+ 
+ 
     const confirmToast = toast.custom(
       (t) => (
         <div className={`toast-confirm ${t.visible ? "animate-enter" : "animate-leave"}`}>
@@ -51,7 +53,7 @@ const AllTestim = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast); // Dismiss the loading toast
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/testimonial/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/testimonial/delete/${id}`);
                   toast.success("Testimonial deleted successfully!");
                   setTestimonials(testimonials.filter((testimonial) => testimonial._id !== id)); // Update state to remove the deleted item
                 } catch (error) {
