@@ -29,7 +29,7 @@ const AddAccreditation = () => {
       if (response.data.success) { // Ensure the API returns success status
         toast.success('Accreditation added successfully!');
         setFormData({ accTitle: '', accDesc1: '', accDesc2: '', accImg: '' }); // Reset form
-        navigate('/about/accreditation/getall'); // Redirect after success
+        navigate('/about/accredetation/getall'); // Redirect after success
       } else {
         toast.error('Failed to add accreditation!');
       }
