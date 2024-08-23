@@ -40,7 +40,7 @@ const AllDirector = () => {
     // Handle delete
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/about/director/delete${id}`); // API endpoint for deletion
+            await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/about/director/delete/${id}`); // API endpoint for deletion
             toast.success("Director deleted successfully!");
             // Refresh the director list after deletion
             setDirector(director.filter(dirc => dirc._id !== id));
