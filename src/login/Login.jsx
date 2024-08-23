@@ -1,3 +1,18 @@
+import React from 'react'
+
+const Login = () => {
+  return (
+    <div>Login</div>
+  )
+}
+
+export default Login
+
+
+
+
+/*
+
 import React, { useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -96,3 +111,6 @@ const Login = () => {
 };
 
 export default Login;
+
+
+*/
