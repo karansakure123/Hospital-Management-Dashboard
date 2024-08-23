@@ -4,11 +4,11 @@ import axios from 'axios';
 import './style/adddir.css';
 
 const AddDirectors = () => {
+  // Updated state keys to match the backend API
   const [formData, setFormData] = useState({
-    dircTitle: '',
-    dircDesc1: '',
-    dircDesc2: '',
-    dircImg: '',
+    dircHeading: '',  // Updated key
+    dircSpeciality: '',  // Updated key
+    dircImg: '',  // Key remains the same
   });
 
   const handleChange = (e) => {
@@ -22,48 +22,40 @@ const AddDirectors = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Sending formData to the backend API
       await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/about/director/addnew', formData);
       toast.success('Directors added successfully!');
-      setFormData({ dircTitle: '', dircDesc1: '', dircDesc2: '', dircImg: '' }); // Reset form
+      // Reset form fields
+      setFormData({ dircHeading: '', dircSpeciality: '', dircImg: '' });
     } catch (error) {
       toast.error('Failed to add Directors!');
+      console.log(error.response.data); // Log the error response for debugging
     }
   };
 
   return (
     <div className="adddirc-container">
-      <h2 className='adddirc-title '>Add New Director</h2>
+      <h2 className="adddirc-title">Add New Director</h2>
       <form className="adddirc-form" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-12 form-group">
-            <label htmlFor="dircTitle">Director Title</label>
+            <label htmlFor="dircHeading">Director Heading</label> {/* Updated label */}
             <input
               type="text"
-              id="dircTitle"
-              name="dircTitle"
-              value={formData.dircTitle}
+              id="dircHeading"
+              name="dircHeading"  // Updated name
+              value={formData.dircHeading}
               onChange={handleChange}
               required
               className="form-control"
             />
           </div>
           <div className="col-12 form-group">
-            <label htmlFor="dircDesc1"> Director Heading</label>
+            <label htmlFor="dircSpeciality">Director Speciality</label> {/* Updated label */}
             <textarea
-              id="dircDesc1"
-              name="dircDesc1"
-              value={formData.dircDesc1}
-              onChange={handleChange}
-              required
-              className="form-control"
-            />
-          </div>
-          <div className="col-12 form-group">
-            <label htmlFor="dircDesc2">Director Speciality</label>
-            <textarea
-              id="dircDesc2"
-              name="dircDesc2"
-              value={formData.dircDesc2}
+              id="dircSpeciality"
+              name="dircSpeciality"  // Updated name
+              value={formData.dircSpeciality}
               onChange={handleChange}
               required
               className="form-control"
