@@ -1,29 +1,25 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
- import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "./style/message.css";
-import { AuthContext } from "../ErrorBoundary";
 
 const Messages = ({ isSidebarOpen }) => { // Accepting sidebar state as a prop
   const [messages, setMessages] = useState([]); // Initialize state for messages
-  const { isAuthenticated } = useContext(AuthContext); // Use context to check authentication
 
   useEffect(() => {
     const fetchMessages = async () => {
-      if (isAuthenticated) { // Fetch messages only if authenticated
-        try {
-          const { data } = await axios.get(
-            "https://hospital-management-backend-4.onrender.com/api/v1/message/getall",
-            { withCredentials: true }
-          );
-          setMessages(data.messages); // Set messages to state
-        } catch (error) {
-          toast.error("Error occurred while fetching messages");
-        }
+      try {
+        const { data } = await axios.get(
+          "https://hospital-management-backend-4.onrender.com/api/v1/message/getall",
+          { withCredentials: true }
+        );
+        setMessages(data.messages); // Set messages to state
+      } catch (error) {
+        toast.error("Error occurred while fetching messages");
       }
     };
     fetchMessages();
-  }, [isAuthenticated]); // Dependency array ensures fetch on authentication change
+  }, []); // Empty dependency array ensures fetch on component mount
 
   return (
     <section className={`messages-sec1 ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
@@ -33,15 +29,15 @@ const Messages = ({ isSidebarOpen }) => { // Accepting sidebar state as a prop
         </div>
         <div className="custom-row">
           {messages && messages.length > 0 ? (
-            messages.map((element,message) => (
+            messages.map((message) => (
               <div className="custom-col" key={message.id}>
                 <div className="messages-card colorful-card">
                   <div className="msg-card-details">
-                    <p>First Name: <span>{element.firstName}</span></p>
-                    <p>Last Name: <span>{element.lastName}</span></p>
-                    <p>Email: <span>{element.email}</span></p>
-                    <p>Phone: <span>{element.phone}</span></p>
-                    <p>Message: <span>{element.message}</span></p>
+                    <p>First Name: <span>{message.firstName}</span></p>
+                    <p>Last Name: <span>{message.lastName}</span></p>
+                    <p>Email: <span>{message.email}</span></p>
+                    <p>Phone: <span>{message.phone}</span></p>
+                    <p>Message: <span>{message.message}</span></p>
                   </div>
                 </div>
               </div>
