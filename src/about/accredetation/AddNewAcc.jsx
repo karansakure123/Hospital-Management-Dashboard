@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import './style/addacc.css';
+import { useNavigate } from 'react-router-dom';
 
 const AddAccreditation = () => {
   const [formData, setFormData] = useState({
@@ -18,13 +19,20 @@ const AddAccreditation = () => {
       [name]: value,
     });
   };
+  const navigate = useNavigate(); // Initialize navigate
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/about/accreditation/addnew', formData);
-      toast.success('Accreditation added successfully!');
-      setFormData({ accTitle: '', accDesc1: '', accDesc2: '', accImg: '' }); // Reset form
+      if (response.data.success) { // Ensure the API returns success status
+        toast.success('Accreditation added successfully!');
+        setFormData({ accTitle: '', accDesc1: '', accDesc2: '', accImg: '' }); // Reset form
+        navigate('/about/accreditation/getall'); // Redirect after success
+      } else {
+        toast.error('Failed to add accreditation!');
+      }
     } catch (error) {
       toast.error('Failed to add accreditation!');
     }

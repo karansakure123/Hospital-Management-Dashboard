@@ -26,6 +26,8 @@ const Accreditation = () => {
     navigate(`/about/accreditation/update/${acc._id}`);
   };
 
+ 
+
   const handleDelete = (accId) => {
     const deleteToast = toast.loading("Confirm delete?", {
       duration: 0,
@@ -82,7 +84,7 @@ const Accreditation = () => {
   };
 
   const handleAdd = () => {
-    navigate("/about/accreditation/addnew");
+    navigate("/about/accredetation/addnew");
   };
 
   return (
@@ -93,7 +95,7 @@ const Accreditation = () => {
           <h1 className="acc-heading">Accreditation</h1>
         </div>
         <div className="col-md-6 mb-3">
-          <button className="add-new-acc" onClick={handleAdd}>
+          <button className="add-new-acc" onClick={handleadd}>
             Add New Accreditation
           </button>
         </div>
