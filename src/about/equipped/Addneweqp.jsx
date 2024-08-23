@@ -26,7 +26,7 @@ const Addneweqp = () => {
       await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/about/equipped/addnew', formData);
       toast.success('Equipped item added successfully!');
       setFormData({ eqpHeading: '', eqpTitle: '', eqpImg: '' }); // Reset form
-      navigate('/path-to-navigate'); // Change this to your desired route
+      navigate('/about/equippe/getall'); // Change this to your desired route
     } catch (error) {
       toast.error('Failed to add equipped item!');
     }
