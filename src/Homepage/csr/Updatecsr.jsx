@@ -16,7 +16,7 @@ const Updatecsr = () => {
 
   useEffect(() => {
     // Fetch the existing data when the component mounts
-    axios.get(`http://localhost:3000/api/v1/csr/get/${id}`)
+    axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/csr/get/${id}`)
       .then(response => {
         setCsrData(response.data); // Set the fetched data in state
       })
@@ -35,7 +35,7 @@ const Updatecsr = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
-    axios.put(`http://localhost:3000/api/v1/csr/update/${id}`, csrData) // Update the CSR data
+    axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/csr/update/${id}`, csrData) // Update the CSR data
       .then(response => {
         toast.success("Item updated successfully!"); // Show success toast
         navigate('/csr/getall'); // Redirect to the get all route

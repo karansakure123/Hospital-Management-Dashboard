@@ -9,7 +9,7 @@ const Allcsr = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/v1/csr/getall')
+    axios.get('https://hospital-management-backend-4.onrender.com/api/v1/csr/getall')
       .then(response => {
         setCsrData(response.data);
       })
@@ -36,7 +36,7 @@ const Allcsr = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast);
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/csr/${id}`);
+                  await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/csr/${id}`);
                   toast.success("Item deleted successfully!");
                   setCsrData(csrData.filter(item => item._id !== id));
                 } catch (error) {
