@@ -25,7 +25,6 @@ const Accreditation = () => {
   const handleUpdate = (acc) => {
     navigate(`/about/accreditation/update/${acc._id}`);
   };
-
  
 
   const handleDelete = (accId) => {
@@ -95,7 +94,7 @@ const Accreditation = () => {
           <h1 className="acc-heading">Accreditation</h1>
         </div>
         <div className="col-md-6 mb-3">
-          <button className="add-new-acc" onClick={handleadd}>
+          <button className="add-new-acc" onClick={handleAdd}>
             Add New Accreditation
           </button>
         </div>
