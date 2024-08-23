@@ -456,7 +456,7 @@ useEffect(() => {
               }`}
             >
               <li className="sidebar-item">
-                <Link to="/about/accreditation/all" className="sidebar-link">
+                <Link to="/about/accreditation/getall" className="sidebar-link">
                   Accreditation
                 </Link>
               </li>

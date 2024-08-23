@@ -30,10 +30,10 @@ const AllDirector = () => {
         fetchDirectors();
     }, []);
 
-    const handleUpdate = (dirc) => {
-        navigate('/about/director/update', { state: { director: dirc } }); 
+    const handleUpdate = (id) => {
+        navigate(`/about/director/update/${id}`); 
     };
-
+    
     const handleDelete = async (id) => {
         try {
             await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/about/director/delete/${id}`);
@@ -68,8 +68,8 @@ const AllDirector = () => {
                                     <p>{dirc.dircSpeciality}</p>
                                 </div>
                                 <div className="sec2-card-buttons">
-                                    <button onClick={() => handleUpdate(dirc)} className="btn-update-dir">Update</button>
-                                    <button onClick={() => handleDelete(dirc._id)} className="btn-delete-dir">Delete</button>
+                                <button onClick={() => handleUpdate(dirc._id)} className="btn-update-dir">Update</button>
+                                <button onClick={() => handleDelete(dirc._id)} className="btn-delete-dir">Delete</button>
                                 </div>
                             </div>
                         </div>
