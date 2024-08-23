@@ -23,7 +23,7 @@ const Accreditation = () => {
   }, []);
 
   const handleUpdate = (acc) => {
-    navigate(`/about/accreditation/update/${acc._id}`);
+    navigate(`/about/accredetation/update/${acc._id}`);
   };
  
 
