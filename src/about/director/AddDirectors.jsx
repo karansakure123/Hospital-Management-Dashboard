@@ -31,7 +31,7 @@ const AddDirectors = () => {
       // Reset form fields
       setFormData({ dircHeading: '', dircSpeciality: '', dircImg: '' });
       // Navigate to the /director/getall route
-      navigate('/director/getall');
+      navigate('/about/director/getall');
     } catch (error) {
       toast.error('Failed to add Directors!');
       console.log(error.response.data); // Log the error response for debugging
