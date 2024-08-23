@@ -11,7 +11,7 @@ const Allinfra = () => {
   // Fetch infrastructure data
   const fetchInfrastructure = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/v1/infra/getall');
+      const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/infra/getall');
       setInfrastructure(response.data.infrastructures);
     } catch (error) {
       console.error("Error fetching infrastructure:", error);
@@ -52,7 +52,7 @@ const Allinfra = () => {
   // Confirm delete action
   const confirmDelete = async (id, toastId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/v1/infra/delete/${id}`);
+      await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/infra/delete/${id}`);
       toast.success("Infrastructure deleted successfully.", { id: toastId });
       fetchInfrastructure(); // Refresh the list after deletion
     } catch (error) {

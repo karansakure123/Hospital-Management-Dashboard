@@ -33,7 +33,7 @@ const NewInfra = () => {
     e.preventDefault();
     
     try {
-      await axios.post('http://localhost:3000/api/v1/infra/addnew', infrastructure);
+      await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/infra/addnew', infrastructure);
       toast.success("Infrastructure added successfully!"); // Show success toast
        navigate('/infra/getall');
     } catch (error) {

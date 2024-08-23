@@ -17,7 +17,7 @@ const Updateinfra = () => {
   useEffect(() => {
     const fetchInfrastructure = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/infra/get/${id}`); // Fetch existing data
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/infra/get/${id}`); // Fetch existing data
         setInfrastructure(response.data.infrastructure);
       } catch (error) {
         console.error("Error fetching infrastructure:", error);
@@ -39,7 +39,7 @@ const Updateinfra = () => {
     e.preventDefault();
     
     try {
-      await axios.put(`http://localhost:3000/api/v1/infra/update/${id}`, infrastructure);
+      await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/infra/update/${id}`, infrastructure);
       toast.success("Infrastructure updated successfully!"); // Show success toast
       navigate('/infra/getall'); // Redirect to the infrastructure list page
     } catch (error) {
