@@ -12,7 +12,7 @@ const Allanaesth = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/anaesthesio/getall');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/anaesthesio/getall');
         const data = response.data;
         setExpCardsData(data);
         if (data.length > 0) {
@@ -41,7 +41,7 @@ const Allanaesth = () => {
           <button
             onClick={async () => {
               try {
-                await axios.delete(`http://localhost:3000/api/v1/anaesthesio/delete/${id}`);
+                await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/anaesthesio/delete/${id}`);
                 toast.success("Item deleted successfully!");
                 setExpCardsData((prevData) => prevData.filter(item => item._id !== id));
               } catch (error) {

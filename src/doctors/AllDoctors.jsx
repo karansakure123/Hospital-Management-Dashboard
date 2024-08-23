@@ -15,7 +15,7 @@ const AllDoctors = () => {
         const fetchDoctors = async () => {
             try {
                 const { data } = await axios.get(
-                    "https://hospital-management-backend-3.onrender.com/api/v1/user/doctors",
+                    "https://hospital-management-backend-4.onrender.com/api/v1/user/doctors",
                     { withCredentials: true }
                 );
                 console.log(data.doctors); // Log the fetched doctors to check the structure
@@ -50,7 +50,7 @@ const AllDoctors = () => {
                     <button
                         onClick={async () => {
                             try {
-                                await axios.delete(`http://localhost:3000/api/v1/user/doctors/delete/${id}`);
+                                await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/user/doctors/delete/${id}`);
                                 toast.success("Item deleted successfully!");
                                 setDoctors((prevData) => prevData.filter(item => item._id !== id));
                             } catch (error) {

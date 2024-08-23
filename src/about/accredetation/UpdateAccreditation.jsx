@@ -23,7 +23,7 @@ const UpdateAccreditation = () => {
       }
 
       try {
-        const response = await axios.get(`https://hospital-management-backend-3.onrender.com/api/v1/about/accreditation/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/about/accreditation/get/${id}`);
         console.log(response.data); // Log the response to check its structure
 
         const { accrediation } = response.data;

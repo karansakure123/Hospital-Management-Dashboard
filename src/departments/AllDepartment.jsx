@@ -13,7 +13,7 @@ const AllDepartment = () => {
   // Fetch department data
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get("https://hospital-management-backend-3.onrender.com/api/v1/departments/getall");
+      const response = await axios.get("https://hospital-management-backend-4.onrender.com/api/v1/departments/getall");
       setDeptData(response.data.departments);
       toast.success("Departments fetched successfully!");
     } catch (error) {

@@ -11,7 +11,7 @@ const AllCardio = () => {
   useEffect(() => {
     const fetchCardioServices = async () => {
       try {
-        const response = await axios.get('https://hospital-management-backend-3.onrender.com/api/v1/cardiology/getall');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/cardiology/getall');
         setCardioServices(response.data); // Assuming response.data contains the array of services
       } catch (error) {
         console.error('Error fetching cardio services:', error);
@@ -36,7 +36,7 @@ const AllCardio = () => {
           <button
             onClick={async () => {
               try {
-                await axios.delete(`https://hospital-management-backend-3.onrender.com/api/v1/cardiology/delete/${id}`);
+                await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/cardiology/delete/${id}`);
                 toast.success("Item deleted successfully!");
                 setExpCardsData((prevData) => prevData.filter(item => item._id !== id));
               } catch (error) {

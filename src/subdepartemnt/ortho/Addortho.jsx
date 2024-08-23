@@ -26,7 +26,7 @@ const Addortho = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://hospital-management-backend-3.onrender.com/api/v1/orthopedics/addnew', {
+      const response = await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/orthopedics/addnew', {
         title,
         description,
         additionalInfo,

@@ -13,7 +13,7 @@ const Messages = ({ isSidebarOpen }) => { // Accepting sidebar state as a prop
       if (isAuthenticated) { // Fetch messages only if authenticated
         try {
           const { data } = await axios.get(
-            "https://hospital-management-backend-3.onrender.com/api/v1/message/getall",
+            "https://hospital-management-backend-4.onrender.com/api/v1/message/getall",
             { withCredentials: true }
           );
           setMessages(data.messages); // Set messages to state

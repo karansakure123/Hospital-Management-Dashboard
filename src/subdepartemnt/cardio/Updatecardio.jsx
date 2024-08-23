@@ -18,7 +18,7 @@ const UpdateCardio = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://hospital-management-backend-3.onrender.com/api/v1/cardiology/get/${id}`);
+        const response = await fetch(`https://hospital-management-backend-4.onrender.com/api/v1/cardiology/get/${id}`);
         const data = await response.json();
         setFormData({
           title: data.title,
@@ -49,7 +49,7 @@ const UpdateCardio = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://hospital-management-backend-3.onrender.com/api/v1/cardiology/update/${id}`, {
+      const response = await fetch(`https://hospital-management-backend-4.onrender.com/api/v1/cardiology/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
