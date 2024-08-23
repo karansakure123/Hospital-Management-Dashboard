@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import './style/adddir.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 const AddDirectors = () => {
   // Updated state keys to match the backend API
@@ -10,6 +12,7 @@ const AddDirectors = () => {
     dircSpeciality: '',  // Updated key
     dircImg: '',  // Key remains the same
   });
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,11 +30,14 @@ const AddDirectors = () => {
       toast.success('Directors added successfully!');
       // Reset form fields
       setFormData({ dircHeading: '', dircSpeciality: '', dircImg: '' });
+      // Navigate to the /director/getall route
+      navigate('/director/getall');
     } catch (error) {
       toast.error('Failed to add Directors!');
       console.log(error.response.data); // Log the error response for debugging
     }
   };
+
 
   return (
     <div className="adddirc-container">
