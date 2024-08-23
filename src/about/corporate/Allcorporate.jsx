@@ -11,7 +11,7 @@ const AllCorporate = () => {
   useEffect(() => {
     const fetchCorporate = async () => {
       try {
-        const response = await axios.get("hhttps://hospital-management-backend-4.onrender.com/api/v1/about/corporate/getall");
+        const response = await axios.get("https://hospital-management-backend-4.onrender.com/api/v1/about/corporate/getall");
         setCorporate(response.data.corporate);
       } catch (err) {
         console.error("Error fetching corporates:", err);
