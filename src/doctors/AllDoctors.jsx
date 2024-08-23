@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import "./style/alldoct.css";
-import { AuthContext } from "../ErrorBoundary";
-import { toast, ToastContainer } from 'react-toastify';
+ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 import { Navigate, useNavigate } from 'react-router-dom';
 
@@ -27,9 +26,7 @@ const AllDoctors = () => {
         fetchDoctors();
     }, []);
 
-    if (!isAuthenticated) {
-        return <Navigate to={"/login"} />;
-    }
+  
 
     const handleUpdate = (id) => {
         if (id) {
