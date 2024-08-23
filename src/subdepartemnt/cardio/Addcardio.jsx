@@ -26,7 +26,7 @@ const AddCardio = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('hhttps://hospital-management-backend-4.onrender.com/api/v1/cardiology/addnew', {
+      const response = await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/cardiology/addnew', {
         title,
         description,
         additionalInfo,

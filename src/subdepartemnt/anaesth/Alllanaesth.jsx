@@ -16,7 +16,7 @@ const Allanaesth = () => {
         const data = response.data;
         setExpCardsData(data);
         if (data.length > 0) {
-          setBgImage(data[0].backgroundImage);
+          setBgImage(data[0].backgroundImage); // Set the background image
         }
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -27,7 +27,7 @@ const Allanaesth = () => {
 
   const handleUpdate = (id) => {
     if (id) {
-      navigate(`/anaesth/update/${id}`);
+      navigate(`/anaesth/update/${id}`); // Navigate to the update route
     }
   };
 
@@ -68,22 +68,6 @@ const Allanaesth = () => {
 
   return (
     <>
-      {/* <div className="container-fluids p-0">
-        <div className="row">
-          <div className="col-12 ansth-sec1">
-            <div className="bgimgs">
-              <img
-                src={bgImage || "https://noblehrc.com/assets/imgs/Cardiac-Sciences.jpg"}
-                alt="Background"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      
-      <br /><br />
-
       <div className="ansth-sec2">
         <div className="container">
           <div className="row align-items-center">
