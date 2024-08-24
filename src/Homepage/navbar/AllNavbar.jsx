@@ -17,7 +17,7 @@ const Navbar = () => {
         const fetchNavigationItems = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:3000/api/v1/navbar/getall");
+                const response = await axios.get("https://hospital-management-backend-4.onrender.com/api/v1/navbar/getall");
                 console.log("Fetched navbar data:", response.data);
 
                 if (response.data.success && response.data.navbar.length > 0) {
@@ -42,7 +42,7 @@ const Navbar = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/api/v1/user/patient/logout", { withCredentials: true });
+            const response = await axios.get("https://hospital-management-backend-4.onrender.com/api/v1/user/patient/logout", { withCredentials: true });
             toast.success(response.data.message);
             setIsAuthenticated(false);
             navigateTo("/"); // Redirect to home after logout

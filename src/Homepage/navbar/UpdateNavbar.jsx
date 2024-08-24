@@ -11,7 +11,7 @@ const UpdateNavbar = () => {
     useEffect(() => {
         const fetchNavItem = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/v1/navbar/get/${id}`);
+                const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/navbar/get/${id}`);
                 if (response.data.success) {
                     setNavItem(response.data.navItem); // Set the existing data in the state
                 } else {
@@ -33,7 +33,7 @@ const UpdateNavbar = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:3000/api/v1/navbar/update/${id}`, navItem);
+            const response = await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/navbar/update/${id}`, navItem);
             if (response.data.success) {
                 toast.success('Navbar item updated successfully!');
                 navigate('/navbar'); // Redirect after successful update
