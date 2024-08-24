@@ -5,7 +5,7 @@ import { toast, Toaster } from 'react-hot-toast';
 
 const UpdateNavbar = () => {
     const { id } = useParams(); // Get the ID from the URL parameters
-    const [navItem, setNavItem] = useState({ name: '', link: '' });
+    const [navItem, setNavItem] = useState({ name: '', link: '', className: '' });
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -59,7 +59,7 @@ const UpdateNavbar = () => {
                             onClick={async () => {
                                 toast.dismiss(deleteToast); // Dismiss loading toast
                                 try {
-                                    await axios.delete(`http://localhost:3000/api/v1/navbar/delete/${id}`);
+                                    await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/navbar/delete/${id}`);
                                     toast.success('Navbar item deleted successfully!');
                                     navigate('/navbar'); // Redirect after successful delete
                                 } catch (error) {
@@ -120,8 +120,20 @@ const UpdateNavbar = () => {
                         required
                     />
                 </div>
+                <div className="mb-3">
+                    <label htmlFor="className" className="form-label">Class Name</label>
+                    <input
+                        type="text"
+                        id="className"
+                        name="className"
+                        className="form-control"
+                        value={navItem.className}
+                        onChange={handleChange}
+                    />
+                </div>
                 <button type="submit" className="btn save-btn-nav">Save Changes</button>
-             </form>
+                <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>Delete</button>
+            </form>
         </div>
     );
 };
