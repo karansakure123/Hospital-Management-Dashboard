@@ -36,7 +36,6 @@ const Navbar = () => {
                 setLoading(false);
             }
         };
-
         fetchNavigationItems();
     }, []);
 
