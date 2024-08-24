@@ -1,5 +1,7 @@
 .messages-sec1 {
-    padding: 40px;
+    padding: 0px;
+    margin: 3rem;
+    width: 900px;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 1px;
   }
@@ -26,6 +28,7 @@
   }
   
   .messages-card {
+    padding: 0px;
     background: linear-gradient(135deg, #00467f, #337066); /* Beautiful gradient */
     color: #ffffff; /* White text for contrast */
     border-radius: 1px; /* Rounded corners */
