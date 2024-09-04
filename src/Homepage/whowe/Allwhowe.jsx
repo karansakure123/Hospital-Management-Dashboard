@@ -11,7 +11,7 @@ const Allwhowe = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/whowe/getall ');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/whowe/getall ');
         console.log("API Response:", response.data);
         if (response.data.success && Array.isArray(response.data.whoWeAreSections)) {
           setWhoWeAreSections(response.data.whoWeAreSections);

@@ -11,7 +11,7 @@ const Intro = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://hospital-management-backend-1-cl2h.onrender.com/api/v1/intro/get');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/intro/get');
         if (response.data.success && Array.isArray(response.data.intros)) {
           setWecData(response.data.intros);
         } else {
@@ -43,7 +43,7 @@ const Intro = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast); // Dismiss the loading toast
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/intro/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/intro/delete/${id}`);
                   toast.success("Intro deleted successfully!");
                   setWecData((prevData) => prevData.filter(item => item._id !== id)); // Update state to remove the deleted item
                 } catch (error) {

@@ -18,7 +18,7 @@ const Updatewhowe = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/whowe/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/whowe/get/${id}`);
         if (response.data.success && response.data.whoWeAre) {
           setFormData(response.data.whoWeAre);
         } else {
@@ -43,7 +43,7 @@ const Updatewhowe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:3000/api/v1/whowe/update/${id}`, formData);
+      const response = await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/whowe/update/${id}`, formData);
       if (response.data.success) {
         toast.success("Updated successfully!");
         navigate('/whowe/getall'); // Redirect to the getall page

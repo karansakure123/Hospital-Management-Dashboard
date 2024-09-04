@@ -19,7 +19,7 @@ const UpdateIntro = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://hospital-management-backend-1-cl2h.onrender.com/api/v1/intro/get/${id}`);
+        const response = await axios.get(`https://hospital-management-backend-4.onrender.com/api/v1/intro/get/${id}`);
         if (response.data.success) {
           setFormData({
             Heading: response.data.intro.Heading,
@@ -51,7 +51,7 @@ const UpdateIntro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:3000/api/v1/intro/update/${id}`, formData);
+      const response = await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/intro/update/${id}`, formData);
       if (response.data.success) {
         toast.success('Update successful!');
         navigate('/intro/getall'); // Redirect back to the main page or wherever you want after update

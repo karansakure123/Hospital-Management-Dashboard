@@ -21,7 +21,7 @@ const AddIntro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://hospital-management-backend-1-cl2h.onrender.com/api/v1/intro/addnew', formData);
+      const response = await axios.post('https://hospital-management-backend-4.onrender.com/api/v1/intro/addnew', formData);
       toast.success(response.data.message);
       setFormData({ Heading: '', title: '', description: '', imageUrl: '' }); // Clear the form
       navigate('/intro/get'); // Navigate to /intro/get after successful submission
