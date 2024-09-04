@@ -57,7 +57,7 @@ const Navbar = () => {
     const handleDelete = (id) => {
         const deleteToast = toast.loading("Confirm delete?", {
             duration: 0,
-        });
+        }); 
 
         const confirmToast = toast.custom(
             (t) => (
