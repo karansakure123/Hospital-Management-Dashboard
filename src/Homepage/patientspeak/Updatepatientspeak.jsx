@@ -32,7 +32,7 @@ const Updatepatientspeak = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/v1/patientspeak/update/${id}`, patientSpeak);
+      await axios.put(`https://hospital-management-backend-4.onrender.com/api/v1/patientspeak/update/${id}`, patientSpeak);
       toast.success('Patient speak updated successfully!');
       navigate('/patientspeak/getall'); // Redirect after successful update
     } catch (error) {
