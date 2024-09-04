@@ -11,7 +11,7 @@ const Allwhowe = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/whowe/getall ');
+        const response = await axios.get('https://hospital-management-backend-4.onrender.com/api/v1/whowe/getall');
         console.log("API Response:", response.data);
         if (response.data.success && Array.isArray(response.data.whoWeAreSections)) {
           setWhoWeAreSections(response.data.whoWeAreSections);
@@ -44,7 +44,7 @@ const Allwhowe = () => {
               onClick={async () => {
                 toast.dismiss(deleteToast); 
                 try {
-                  await axios.delete(`http://localhost:3000/api/v1/whowe/delete/${id}`);
+                  await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/whowe/delete/${id}`);
                   toast.success("'Who We Are' section deleted successfully!");
                   setWhoWeAreSections(whoWeAreSections.filter(item => item._id !== id));
                 } catch (error) {
