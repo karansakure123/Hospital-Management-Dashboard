@@ -68,7 +68,7 @@ const Navbar = () => {
                             onClick={async () => {
                                 toast.dismiss(deleteToast); // Dismiss loading toast
                                 try {
-                                    await axios.delete(`http://localhost:3000/api/v1/navbar/delete/${id}`);
+                                    await axios.delete(`https://hospital-management-backend-4.onrender.com/api/v1/navbar/delete/${id}`);
                                     toast.success('Navbar item deleted successfully!');
                                     setNavigationItems(prevItems => prevItems.filter(item => item._id !== id));
                                     navigateTo('/navbar/'); // Navigate to /navbar/getall after deletion
